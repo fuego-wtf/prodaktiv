@@ -1,11 +1,11 @@
-# L1NEAR Implementation Plan
+# Prodaktiv Implementation Plan
 
 ## File Tree Comparison
 
 ### BEFORE (Current Web App)
 
 ```
-l1near/                              # React 19 + Vite web app
+prodaktiv/                              # React 19 + Vite web app
 ├── App.tsx                          # Main app component
 ├── index.tsx                        # Entry point
 ├── index.html
@@ -43,16 +43,16 @@ l1near/                              # React 19 + Vite web app
 │   └── protocol-spec.md             # ESP32 BLE spec
 │
 └── docs/
-    ├── L1NEAR_ARCHITECTURE.md       # Architecture overview
+    ├── Prodaktiv_ARCHITECTURE.md       # Architecture overview
     └── plans/
-        └── 2025-12-26-l1near-production-design.md
+        └── 2025-12-26-prodaktiv-production-design.md
 ```
 
 ### AFTER (Graphyn Plugin + Website + Firmware)
 
 ```
 graphyn-workspace/
-├── l1near/                          # GPUI Plugin (submodule)
+├── prodaktiv/                          # GPUI Plugin (submodule)
 │   ├── Cargo.toml                   # Rust dependencies
 │   ├── README.md
 │   │
@@ -103,7 +103,7 @@ graphyn-workspace/
 
 ---
 
-l1near-web/                          # Marketing Website (new repo)
+prodaktiv-web/                          # Marketing Website (new repo)
 ├── package.json
 ├── vite.config.ts
 ├── tsconfig.json
@@ -138,7 +138,7 @@ l1near-web/                          # Marketing Website (new repo)
 
 ---
 
-l1near-firmware/                     # ESP32 Controller (new repo)
+prodaktiv-firmware/                     # ESP32 Controller (new repo)
 ├── platformio.ini
 ├── README.md
 │
@@ -182,14 +182,14 @@ l1near-firmware/                     # ESP32 Controller (new repo)
 ## Sequential Task List with Dependencies
 
 ```
-                              L1NEAR IMPLEMENTATION ROADMAP
+                              Prodaktiv IMPLEMENTATION ROADMAP
 ═══════════════════════════════════════════════════════════════════════════════
 
 PHASE 1: PLUGIN FOUNDATION                                    [Week 1-2]
 ─────────────────────────────────────────────────────────────────────────────
 
     ┌─────────────────────────────────────────────────────────────────────┐
-    │ T-001: Initialize l1near plugin repo                                 │
+    │ T-001: Initialize prodaktiv plugin repo                                 │
     │        Create Cargo.toml, implement Plugin trait skeleton            │
     │        Files: src/lib.rs, src/plugin.rs, Cargo.toml                  │
     │        Depends on: (none)                                            │
@@ -340,7 +340,7 @@ PHASE 5: WEBSITE (PARALLEL TRACK)                             [Week 2-4]
 ─────────────────────────────────────────────────────────────────────────────
 
     ┌─────────────────────────────────────────────────────────────────────┐
-    │ T-022: Initialize l1near-web repo                                    │
+    │ T-022: Initialize prodaktiv-web repo                                    │
     │        Vite + React 19 + TypeScript setup                            │
     │        Files: package.json, vite.config.ts, tsconfig.json            │
     │        Depends on: (none) - PARALLEL TRACK                           │
@@ -374,7 +374,7 @@ PHASE 6: FIRMWARE (PARALLEL TRACK)                            [Week 3-5]
 ─────────────────────────────────────────────────────────────────────────────
 
     ┌─────────────────────────────────────────────────────────────────────┐
-    │ T-027: Initialize l1near-firmware repo                               │
+    │ T-027: Initialize prodaktiv-firmware repo                               │
     │        PlatformIO + ESP32-S3 setup                                   │
     │        Files: platformio.ini, src/main.cpp                           │
     │        Depends on: (none) - PARALLEL TRACK                           │

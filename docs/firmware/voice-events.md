@@ -21,7 +21,7 @@
 
 ## Overview
 
-Voice events are transmitted from the L1NEAR device to the mobile app via BLE notifications. This enables real-time feedback for voice recording state changes.
+Voice events are transmitted from the Prodaktiv device to the mobile app via BLE notifications. This enables real-time feedback for voice recording state changes.
 
 ### GATT Location
 
@@ -742,7 +742,7 @@ static int voice_cccd_callback(uint16_t conn_handle,
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0.0 | 2025-12-26 | L1NEAR Team | Initial specification |
+| 1.0.0 | 2025-12-26 | Prodaktiv Team | Initial specification |
 
 ---
 

@@ -1,5 +1,5 @@
 /**
- * Session State Machine Types for L1NEAR
+ * Session State Machine Types for Prodaktiv
  * Tasks: FCS-372, FCS-373
  *
  * This module defines a comprehensive state machine for managing focus sessions,
@@ -11,7 +11,7 @@
 // ============================================================================
 
 /**
- * SessionPhase represents the four core phases of the L1NEAR workflow.
+ * SessionPhase represents the four core phases of the Prodaktiv workflow.
  *
  * Phase Transitions:
  *   PLANNING -> FOCUS (user starts a session)

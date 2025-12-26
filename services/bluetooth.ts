@@ -1,13 +1,13 @@
 /**
- * L1NEAR Web Bluetooth Service
+ * Prodaktiv Web Bluetooth Service
  *
  * Handles connection, communication, and state management for the
- * L1NEAR focus timer device via Web Bluetooth API.
+ * Prodaktiv focus timer device via Web Bluetooth API.
  */
 
 import {
   SERVICE_UUIDS,
-  L1NEAR_SERVICE_UUID,
+  Prodaktiv_SERVICE_UUID,
   CHARACTERISTIC_UUIDS,
   Command,
   DeviceEvent,
@@ -146,7 +146,7 @@ export function checkBluetoothSupport(): { supported: boolean; error?: string } 
 // ============================================================================
 
 /**
- * Scan for and connect to a L1NEAR device
+ * Scan for and connect to a Prodaktiv device
  */
 export async function connectDevice(): Promise<boolean> {
   const support = checkBluetoothSupport();
@@ -163,11 +163,11 @@ export async function connectDevice(): Promise<boolean> {
   updateState({ connectionState: 'connecting', reconnectAttempts: 0 });
 
   try {
-    // Request device with L1NEAR service filter
+    // Request device with Prodaktiv service filter
     device = await navigator.bluetooth.requestDevice({
       filters: [
-        { services: [L1NEAR_SERVICE_UUID] },
-        { namePrefix: 'L1NEAR' },
+        { services: [Prodaktiv_SERVICE_UUID] },
+        { namePrefix: 'Prodaktiv' },
       ],
       optionalServices: [
         SERVICE_UUIDS.TIMER,
@@ -175,7 +175,7 @@ export async function connectDevice(): Promise<boolean> {
         SERVICE_UUIDS.SESSION,
         SERVICE_UUIDS.DEVICE_INFO,
         SERVICE_UUIDS.VOICE,
-        L1NEAR_SERVICE_UUID,
+        Prodaktiv_SERVICE_UUID,
       ],
     });
 
@@ -190,7 +190,7 @@ export async function connectDevice(): Promise<boolean> {
     // Listen for disconnection
     device.addEventListener('gattserverdisconnected', handleDisconnection);
 
-    updateState({ deviceName: device.name || 'L1NEAR Device' });
+    updateState({ deviceName: device.name || 'Prodaktiv Device' });
 
     // Connect to GATT server
     server = await device.gatt.connect();
@@ -232,7 +232,7 @@ async function setupServicesAndCharacteristics(): Promise<void> {
 
   try {
     // Get Session service (primary for commands/events)
-    sessionService = await server.getPrimaryService(L1NEAR_SERVICE_UUID);
+    sessionService = await server.getPrimaryService(Prodaktiv_SERVICE_UUID);
 
     // Get command characteristic
     commandCharacteristic = await sessionService.getCharacteristic(

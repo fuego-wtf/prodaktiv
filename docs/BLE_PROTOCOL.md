@@ -1,10 +1,10 @@
-# L1NEAR BLE Protocol Specification
+# Prodaktiv BLE Protocol Specification
 
-This document describes the Bluetooth Low Energy (BLE) protocol used by the L1NEAR focus timer device.
+This document describes the Bluetooth Low Energy (BLE) protocol used by the Prodaktiv focus timer device.
 
 ## Overview
 
-The L1NEAR device communicates with the mobile app via Web Bluetooth, using a custom GATT service architecture with multiple characteristics for commands, events, and state synchronization.
+The Prodaktiv device communicates with the mobile app via Web Bluetooth, using a custom GATT service architecture with multiple characteristics for commands, events, and state synchronization.
 
 ## GATT Services
 
@@ -12,7 +12,7 @@ The L1NEAR device communicates with the mobile app via Web Bluetooth, using a cu
 
 | Service | UUID | Description |
 |---------|------|-------------|
-| L1NEAR Service | `4c494e34-5234-4c49-4e33-345200000001` | Primary service for device filtering |
+| Prodaktiv Service | `4c494e34-5234-4c49-4e33-345200000001` | Primary service for device filtering |
 | Timer | `00001800-0000-1000-8000-00805f9b34fb` | Focus session timer control |
 | Lock | `00001801-0000-1000-8000-00805f9b34fb` | Phone lock mechanism |
 | Session | `00001802-0000-1000-8000-00805f9b34fb` | Session state sync |
@@ -213,7 +213,7 @@ The device periodically sends state packets via the Session State characteristic
 
 ## Connection Flow
 
-1. App scans for devices with `L1NEAR` name prefix or L1NEAR service UUID
+1. App scans for devices with `Prodaktiv` name prefix or Prodaktiv service UUID
 2. App connects to GATT server
 3. App discovers services and characteristics
 4. App subscribes to:

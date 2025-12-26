@@ -1,13 +1,13 @@
-# L1NEAR Architecture Decision
+# Prodaktiv Architecture Decision
 
 ## Deployment Modes
 
-L1NEAR has **two deployment modes**:
+Prodaktiv has **two deployment modes**:
 
 ### Mode 1: Web (Marketing/Onboarding)
 
 ```
-l1near.com (React web app)
+prodaktiv.com (React web app)
 ├─ Landing page for new users
 ├─ Linear API integration (enter API key, manage tasks)
 ├─ Timer + Planner functionality
@@ -23,8 +23,8 @@ l1near.com (React web app)
 
 ```
 graphyn-desktop (GPUI + Rust)
-└─ l1near plugin (via graphyn-plugin-framework)
-   ├─ Full l1near experience (embedded webview or native)
+└─ prodaktiv plugin (via graphyn-plugin-framework)
+   ├─ Full prodaktiv experience (embedded webview or native)
    ├─ ESP32 BLE hardware integration
    ├─ Local STT via whisper-rs
    ├─ Multi-agent orchestration
@@ -35,7 +35,7 @@ graphyn-desktop (GPUI + Rust)
 
 ## Plugin Framework Integration
 
-The `graphyn-plugin-framework` provides a **multi-agent interface** that l1near (and other apps) can utilize:
+The `graphyn-plugin-framework` provides a **multi-agent interface** that prodaktiv (and other apps) can utilize:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -48,7 +48,7 @@ The `graphyn-plugin-framework` provides a **multi-agent interface** that l1near 
 │  └─ Multi-agent orchestration                                        │
 │                                                                      │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐ │
-│  │  l1near     │  │  rayban     │  │  figma      │  │  linear     │ │
+│  │  prodaktiv     │  │  rayban     │  │  figma      │  │  linear     │ │
 │  │  plugin     │  │  plugin     │  │  plugin     │  │  plugin     │ │
 │  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘ │
 │         │                │                │                │        │
@@ -77,14 +77,14 @@ The `graphyn-plugin-framework` provides a **multi-agent interface** that l1near 
 
 ## Lin34r Plugin Structure
 
-When running inside graphyn-desktop, l1near becomes a **plugin**:
+When running inside graphyn-desktop, prodaktiv becomes a **plugin**:
 
 ```
 graphyn-workspace/
 ├─ desktop/              # graphyn-desktop (GPUI host)
 ├─ framework/            # graphyn-plugin-framework
 └─ plugins/
-   └─ l1near/           # l1near plugin
+   └─ prodaktiv/           # prodaktiv plugin
       ├─ Cargo.toml
       └─ src/
          ├─ lib.rs       # Plugin trait impl
@@ -97,7 +97,7 @@ graphyn-workspace/
 ### Plugin Implementation
 
 ```rust
-// plugins/l1near/src/plugin.rs
+// plugins/prodaktiv/src/plugin.rs
 
 use graphyn_plugin_framework::{Plugin, PluginContext, PluginResult, StreamingTask, PluginEvent};
 use async_trait::async_trait;
@@ -108,8 +108,8 @@ pub struct Lin34rPlugin {
 
 #[async_trait]
 impl Plugin for Lin34rPlugin {
-    fn id(&self) -> &str { "l1near" }
-    fn name(&self) -> &str { "L1NEAR Focus System" }
+    fn id(&self) -> &str { "prodaktiv" }
+    fn name(&self) -> &str { "Prodaktiv Focus System" }
     fn version(&self) -> &str { env!("CARGO_PKG_VERSION") }
 
     async fn execute(&self, ctx: PluginContext) -> Result<PluginResult> {
@@ -209,10 +209,10 @@ User: "Fix the authentication bug in the login flow"
 
 ## Shared Codebase Strategy
 
-The l1near React codebase is **shared** between web and desktop:
+The prodaktiv React codebase is **shared** between web and desktop:
 
 ```
-l1near/
+prodaktiv/
 ├─ src/                      # React components (shared)
 │  ├─ App.tsx
 │  ├─ components/
@@ -284,7 +284,7 @@ export const NowRail = () => {
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                    RAYBAN (Reference)         L1NEAR (Target)       │
+│                    RAYBAN (Reference)         Prodaktiv (Target)       │
 ├─────────────────────────────────────────────────────────────────────┤
 │  Frontend      React 18 + TypeScript         React 19 + TypeScript  │
 │  Styling       Tailwind CSS                  Tailwind CSS           │
@@ -351,7 +351,7 @@ export const NowRail = () => {
 ### Tauri Project Structure
 
 ```
-l1near/
+prodaktiv/
 ├── src/                          # Existing React frontend
 │   ├── App.tsx
 │   ├── components/
@@ -382,7 +382,7 @@ l1near/
 
 ```toml
 [package]
-name = "l1near-desktop"
+name = "prodaktiv-desktop"
 version = "0.1.0"
 edition = "2021"
 
@@ -441,7 +441,7 @@ async fn create_linear_issue(draft: LinearTaskDraft, api_key: String) -> Result<
 
 #[tauri::command]
 async fn save_audio_recording(data: Vec<u8>, filename: String) -> Result<String, String> {
-    // Save to ~/Documents/L1NEAR/recordings/
+    // Save to ~/Documents/Prodaktiv/recordings/
     audio::save_recording(&data, &filename).map_err(|e| e.to_string())
 }
 
@@ -538,7 +538,7 @@ pub async fn transcribe(audio_path: &str) -> Result<TranscriptResult, Box<dyn st
     let samples = crate::audio::decode_to_pcm(path)?;
 
     // 2. Load Whisper model (cached)
-    let model_path = get_model_path()?;  // ~/.l1near/models/whisper-base.en.bin
+    let model_path = get_model_path()?;  // ~/.prodaktiv/models/whisper-base.en.bin
     let ctx = WhisperContext::new_with_params(&model_path, WhisperContextParameters::default())?;
 
     // 3. Run inference
@@ -576,7 +576,7 @@ pub async fn transcribe(audio_path: &str) -> Result<TranscriptResult, Box<dyn st
 
 fn get_model_path() -> Result<String, Box<dyn std::error::Error>> {
     let home = dirs::home_dir().ok_or("No home directory")?;
-    let model_dir = home.join(".l1near").join("models");
+    let model_dir = home.join(".prodaktiv").join("models");
     std::fs::create_dir_all(&model_dir)?;
 
     let model_path = model_dir.join("whisper-base.en.bin");
@@ -638,12 +638,12 @@ impl Plugin for SttPlugin {
 
 - All STT processing happens **locally** via whisper.cpp
 - No audio data leaves the device
-- Model files cached in `~/.l1near/models/`
+- Model files cached in `~/.prodaktiv/models/`
 - Only transcripts sent to AI for task parsing
 
 ## Next Steps
 
-1. [ ] Add Tauri to l1near (`npm add @tauri-apps/cli @tauri-apps/api`)
+1. [ ] Add Tauri to prodaktiv (`npm add @tauri-apps/cli @tauri-apps/api`)
 2. [ ] Create `src-tauri/` with Rust backend
 3. [ ] Implement `transcribe_audio` command with whisper-rs
 4. [ ] Build VoiceCapture.tsx with MediaRecorder

@@ -29,7 +29,7 @@ export const Header: React.FC<HeaderProps> = ({
               <Target size={24} />
             </div>
             <div>
-              <h1 className="text-2xl font-bold font-mono tracking-tighter">L1NEAR</h1>
+              <h1 className="text-2xl font-bold font-mono tracking-tighter">Prodaktiv</h1>
               <p className="text-xs font-mono text-gray-500 uppercase tracking-widest">Graphyn.xyz Plugin</p>
             </div>
           </div>

@@ -21,7 +21,7 @@
 
 ## Overview
 
-L1NEAR supports two primary button interaction modes for voice recording:
+Prodaktiv supports two primary button interaction modes for voice recording:
 
 | Mode | Trigger | Recording | Use Case |
 |------|---------|-----------|----------|
@@ -730,7 +730,7 @@ void testTimingAccuracy() {
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0.0 | 2025-12-26 | L1NEAR Team | Initial specification |
+| 1.0.0 | 2025-12-26 | Prodaktiv Team | Initial specification |
 
 ---
 

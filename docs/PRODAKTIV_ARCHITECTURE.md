@@ -1,10 +1,10 @@
-# L1NEAR Architecture Plan
+# Prodaktiv Architecture Plan
 
 ## Overview
 
-L1NEAR is a focus productivity system with three distribution channels:
+Prodaktiv is a focus productivity system with three distribution channels:
 
-1. **l1near.com** - Marketing website & product sales
+1. **prodaktiv.com** - Marketing website & product sales
 2. **Graphyn Plugin** - Desktop plugin for Graphyn users (Rust + GPUI)
 3. **Physical Controller** - ESP32 device that locks phones during focus sessions
 
@@ -14,11 +14,11 @@ L1NEAR is a focus productivity system with three distribution channels:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                            L1NEAR ECOSYSTEM                                  │
+│                            Prodaktiv ECOSYSTEM                                  │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                              │
 │  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────────────┐  │
-│  │  l1near.com     │    │  Graphyn Plugin │    │  ESP32 Controller       │  │
+│  │  prodaktiv.com     │    │  Graphyn Plugin │    │  ESP32 Controller       │  │
 │  │  (Marketing)    │    │  (Desktop App)  │    │  (Hardware Device)      │  │
 │  │                 │    │                 │    │                         │  │
 │  │  - Landing      │    │  - Focus Mode   │    │  - Phone Locker         │  │
@@ -46,12 +46,12 @@ L1NEAR is a focus productivity system with three distribution channels:
 
 ## Component Breakdown
 
-### 1. l1near.com (Website)
+### 1. prodaktiv.com (Website)
 
 **Purpose**: Product marketing, sales, and customer dashboard
 
 ```
-l1near-web/                      # Separate git repo
+prodaktiv-web/                      # Separate git repo
 ├── src/
 │   ├── pages/
 │   │   ├── index.tsx            # Landing page (current design)
@@ -74,12 +74,12 @@ l1near-web/                      # Separate git repo
 
 ---
 
-### 2. Graphyn Plugin (l1near-plugin)
+### 2. Graphyn Plugin (prodaktiv-plugin)
 
 **Purpose**: Desktop focus mode with OS-level locking
 
 ```
-l1near-plugin/                   # Separate git repo, graphyn submodule
+prodaktiv-plugin/                   # Separate git repo, graphyn submodule
 ├── src/
 │   ├── lib.rs                   # Plugin exports
 │   ├── plugin.rs                # Plugin + StreamingTask implementation
@@ -109,7 +109,7 @@ l1near-plugin/                   # Separate git repo, graphyn submodule
 **Plugin Implementation**:
 
 ```rust
-// l1near-plugin/src/plugin.rs
+// prodaktiv-plugin/src/plugin.rs
 use graphyn_plugin_framework::{
     Plugin, StreamingTask, PluginContext, PluginResult,
     PluginEvent, PluginEventStream
@@ -122,8 +122,8 @@ pub struct Lin34rPlugin {
 
 #[async_trait]
 impl Plugin for Lin34rPlugin {
-    fn id(&self) -> &str { "l1near" }
-    fn name(&self) -> &str { "L1NEAR Focus Mode" }
+    fn id(&self) -> &str { "prodaktiv" }
+    fn name(&self) -> &str { "Prodaktiv Focus Mode" }
     fn version(&self) -> &str { env!("CARGO_PKG_VERSION") }
 
     async fn execute(&self, ctx: PluginContext) -> Result<PluginResult> {
@@ -185,12 +185,12 @@ impl StreamingTask for Lin34rPlugin {
 
 ---
 
-### 3. Physical Controller (l1near-firmware)
+### 3. Physical Controller (prodaktiv-firmware)
 
 **Purpose**: ESP32-S3 device that physically locks phones
 
 ```
-l1near-firmware/                 # Separate git repo
+prodaktiv-firmware/                 # Separate git repo
 ├── src/
 │   ├── main.cpp                 # Entry point
 │   ├── ble/
@@ -245,7 +245,7 @@ l1near-firmware/                 # Separate git repo
 │       │         └── Windows: Focus Assist                                 │
 │       │                                                                   │
 │       ├──► [5] Connect BLE Controller (optional)                          │
-│       │         ├── Scan for "L1NEAR-XXXX"                                │
+│       │         ├── Scan for "Prodaktiv-XXXX"                                │
 │       │         ├── Connect GATT                                          │
 │       │         └── Send LOCK command                                     │
 │       │                                                                   │
@@ -310,7 +310,7 @@ l1near-firmware/                 # Separate git repo
 │           │                                            │                  │
 │   [1] Focus Start                          [A] Idle (display off)        │
 │           │                                            │                  │
-│           ├──► Connect to L1NEAR-XXXX                  │                  │
+│           ├──► Connect to Prodaktiv-XXXX                  │                  │
 │           │                                            │                  │
 │           ├──► Write SYNC_TIMER (0x03)     ─────────►  │                  │
 │           │    { timerSeconds: 5400,                   │                  │
@@ -405,7 +405,7 @@ impl TaskQueue {
 
 ```
 graphyn-workspace/
-├── l1near/                      # Plugin submodule
+├── prodaktiv/                      # Plugin submodule
 │   ├── src/
 │   │   ├── lib.rs
 │   │   ├── plugin.rs            # Plugin + StreamingTask
@@ -426,7 +426,7 @@ graphyn-workspace/
 
 ---
 
-l1near-web/                      # Website repo
+prodaktiv-web/                      # Website repo
 ├── src/
 │   ├── pages/
 │   ├── components/              # Reuse current React components
@@ -435,7 +435,7 @@ l1near-web/                      # Website repo
 
 ---
 
-l1near-firmware/                 # Controller repo
+prodaktiv-firmware/                 # Controller repo
 ├── src/
 │   ├── main.cpp
 │   ├── ble/
@@ -474,7 +474,7 @@ l1near-firmware/                 # Controller repo
    - Lock/unlock commands
 
 4. **Phase 4**: Website & Marketplace
-   - Build l1near.com marketing site
+   - Build prodaktiv.com marketing site
    - Stripe checkout integration
    - Publish to Graphyn plugin marketplace
 

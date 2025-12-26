@@ -1,11 +1,11 @@
-# L1NEAR Production Design
+# Prodaktiv Production Design
 
 **Date**: 2025-12-26
 **Status**: In Progress
 
 ## Overview
 
-L1NEAR is a productivity system combining:
+Prodaktiv is a productivity system combining:
 1. **Web App** - React-based focus timer with Linear integration
 2. **Hardware Device** - ESP32-based phone locker with e-ink display
 
@@ -31,7 +31,7 @@ The device enforces focus by physically locking your phone during deep work sess
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        L1NEAR SYSTEM                            │
+│                        Prodaktiv SYSTEM                            │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │   ┌─────────────────┐         BLE          ┌─────────────────┐ │
@@ -84,7 +84,7 @@ The device enforces focus by physically locking your phone during deep work sess
 ## File Structure (After)
 
 ```
-l1near/
+prodaktiv/
 ├── App.tsx
 ├── types.ts                        # Updated with DeviceState
 ├── components/
@@ -101,7 +101,7 @@ l1near/
 ├── firmware/
 │   └── protocol-spec.md            # NEW: Hardware team docs
 └── docs/plans/
-    └── 2025-12-26-l1near-production-design.md
+    └── 2025-12-26-prodaktiv-production-design.md
 ```
 
 ## BLE Protocol Summary

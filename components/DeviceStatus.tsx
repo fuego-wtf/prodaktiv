@@ -18,7 +18,7 @@ export const DeviceStatus: React.FC<DeviceStatusProps> = ({
       case 'connected':
         return {
           dotColor: 'bg-green-500',
-          text: 'L1NEAR Connected',
+          text: 'Prodaktiv Connected',
           icon: BluetoothConnected,
           pulse: false,
           clickable: false

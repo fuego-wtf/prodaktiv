@@ -11,7 +11,7 @@ export const LandingPage = ({ onEnter }: { onEnter: () => void }) => {
                     <div className="bg-zinc-900 text-white p-1 rounded-sm">
                         <Target size={20} strokeWidth={2.5} />
                     </div>
-                    <span className="text-lg font-bold font-mono tracking-tight">L1NEAR</span>
+                    <span className="text-lg font-bold font-mono tracking-tight">Prodaktiv</span>
                 </div>
                 
                 <nav className="hidden md:flex gap-6 text-sm font-medium text-zinc-600">
@@ -176,7 +176,7 @@ export const LandingPage = ({ onEnter }: { onEnter: () => void }) => {
                 <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="flex items-center gap-2">
                         <div className="h-6 w-6 bg-zinc-900 rounded-sm"></div>
-                        <span className="font-mono font-bold">L1NEAR</span>
+                        <span className="font-mono font-bold">Prodaktiv</span>
                     </div>
                     <div className="text-sm text-zinc-500 font-mono">
                         © {new Date().getFullYear()} Graphyn.xyz. All systems nominal.

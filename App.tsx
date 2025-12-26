@@ -14,9 +14,9 @@ import { useDevice } from './hooks/useDevice';
 import { DayLog, ScoreState, INITIAL_DAY_LOG, Phase, AppSettings, INITIAL_SETTINGS, ChatEntry } from './types';
 import { ShieldAlert, RotateCcw, Settings as SettingsIcon, Sidebar, PanelRightClose, PanelRightOpen } from 'lucide-react';
 
-const STORAGE_KEY = 'l1near_app_data_v1';
-const SETTINGS_KEY = 'l1near_app_settings';
-const VIEW_KEY = 'l1near_view_preference';
+const STORAGE_KEY = 'prodaktiv_app_data_v1';
+const SETTINGS_KEY = 'prodaktiv_app_settings';
+const VIEW_KEY = 'prodaktiv_view_preference';
 
 const App: React.FC = () => {
   const [log, setLog] = useState<DayLog>(INITIAL_DAY_LOG);

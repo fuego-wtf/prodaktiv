@@ -2,7 +2,7 @@
 
 ## Overview
 
-Voice-to-Plan transforms spoken task descriptions into structured development plans via the L1NEAR physical controller. Developer pushes knob, speaks intent, releases - gets a crystal clear plan with Linear tasks.
+Voice-to-Plan transforms spoken task descriptions into structured development plans via the Prodaktiv physical controller. Developer pushes knob, speaks intent, releases - gets a crystal clear plan with Linear tasks.
 
 ---
 
@@ -21,7 +21,7 @@ Voice-to-Plan transforms spoken task descriptions into structured development pl
 │     ┌───────────────────────────────────────────────────────────────────┐   │
 │     │                     GRAPHYN DESKTOP                                │   │
 │     │  ┌─────────────────────────────────────────────────────────────┐  │   │
-│     │  │  L1NEAR Plugin                                              │  │   │
+│     │  │  Prodaktiv Plugin                                              │  │   │
 │     │  │                                                             │  │   │
 │     │  │  ┌─────────────────────────────────────────────────────┐   │  │   │
 │     │  │  │ 🎙️ Recording...                              [STOP] │   │  │   │
@@ -79,7 +79,7 @@ Voice-to-Plan transforms spoken task descriptions into structured development pl
 │  │  │ Button │──┼─────────────────────► │  GRAPHYN DESKTOP               │  │
 │  │  └────────┘  │     VOICE_START       │                                │  │
 │  │              │     VOICE_STOP        │  ┌──────────────────────────┐  │  │
-│  │  ┌────────┐  │                       │  │  L1NEAR Plugin           │  │  │
+│  │  ┌────────┐  │                       │  │  Prodaktiv Plugin           │  │  │
 │  │  │ E-Ink  │◄─┼───────────────────────│  │                          │  │  │
 │  │  │Display │  │     State Updates     │  │  ┌────────────────────┐  │  │  │
 │  │  └────────┘  │                       │  │  │ VoiceCaptureView   │  │  │  │
@@ -283,7 +283,7 @@ Add new characteristic for voice commands:
 │                          BLE GATT EXTENSION                                  │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                              │
-│  Service: L1NEAR (0x4C49)                                                    │
+│  Service: Prodaktiv (0x4C49)                                                    │
 │                                                                              │
 │  Existing Characteristics:                                                   │
 │  ├── State      (0x4C50) - Read/Notify - Lock state, phone presence         │
@@ -333,10 +333,10 @@ Add new characteristic for voice commands:
 
 ## File Structure
 
-### Plugin (l1near-plugin)
+### Plugin (prodaktiv-plugin)
 
 ```
-l1near-plugin/
+prodaktiv-plugin/
 ├── src/
 │   ├── lib.rs
 │   ├── plugin.rs                    # Plugin + StreamingTask
@@ -374,10 +374,10 @@ l1near-plugin/
 └── README.md
 ```
 
-### Firmware (l1near-firmware)
+### Firmware (prodaktiv-firmware)
 
 ```
-l1near-firmware/
+prodaktiv-firmware/
 ├── src/
 │   ├── main.cpp
 │   │
@@ -404,16 +404,16 @@ l1near-firmware/
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                         LETTA AGENT: l1near-planner                          │
+│                         LETTA AGENT: prodaktiv-planner                          │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                              │
-│  Agent ID: l1near-planner-{user_id}                                          │
+│  Agent ID: prodaktiv-planner-{user_id}                                          │
 │  Type: memgpt_agent                                                          │
 │                                                                              │
 │  Core Memory Blocks:                                                         │
 │  ┌───────────────────────────────────────────────────────────────────────┐   │
 │  │ persona:                                                              │   │
-│  │   "I am a development planning assistant for L1NEAR. I help          │   │
+│  │   "I am a development planning assistant for Prodaktiv. I help          │   │
 │  │    developers break down spoken task descriptions into structured     │   │
 │  │    Linear issues with time estimates. I have context about the       │   │
 │  │    Graphyn workspace and can query the knowledge base for relevant   │   │
@@ -494,7 +494,7 @@ l1near-firmware/
 
 | Task | Description | Estimate |
 |------|-------------|----------|
-| T-043 | Create l1near-planner agent in Letta | 3h |
+| T-043 | Create prodaktiv-planner agent in Letta | 3h |
 | T-044 | Define memory blocks schema | 2h |
 | T-045 | Implement planning tools (Linear, KB) | 4h |
 | T-046 | Task breakdown and estimation logic | 4h |

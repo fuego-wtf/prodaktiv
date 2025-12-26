@@ -97,7 +97,7 @@ const PhoneStatusIndicator: React.FC<PhoneStatusIndicatorProps> = ({ hasPhone, i
         ringColor: 'border-zinc-200',
         statusText: 'No Phone Detected',
         statusColor: 'text-zinc-500',
-        description: 'Place your phone on the L1NEAR device'
+        description: 'Place your phone on the Prodaktiv device'
       };
     }
     if (isLocked) {
