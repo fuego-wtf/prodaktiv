@@ -1,10 +1,10 @@
-# LIN34R Architecture Plan
+# L1NEAR Architecture Plan
 
 ## Overview
 
-LIN34R is a focus productivity system with three distribution channels:
+L1NEAR is a focus productivity system with three distribution channels:
 
-1. **lin34r.com** - Marketing website & product sales
+1. **l1near.com** - Marketing website & product sales
 2. **Graphyn Plugin** - Desktop plugin for Graphyn users (Rust + GPUI)
 3. **Physical Controller** - ESP32 device that locks phones during focus sessions
 
@@ -14,11 +14,11 @@ LIN34R is a focus productivity system with three distribution channels:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                            LIN34R ECOSYSTEM                                  │
+│                            L1NEAR ECOSYSTEM                                  │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                              │
 │  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────────────┐  │
-│  │  lin34r.com     │    │  Graphyn Plugin │    │  ESP32 Controller       │  │
+│  │  l1near.com     │    │  Graphyn Plugin │    │  ESP32 Controller       │  │
 │  │  (Marketing)    │    │  (Desktop App)  │    │  (Hardware Device)      │  │
 │  │                 │    │                 │    │                         │  │
 │  │  - Landing      │    │  - Focus Mode   │    │  - Phone Locker         │  │
@@ -46,12 +46,12 @@ LIN34R is a focus productivity system with three distribution channels:
 
 ## Component Breakdown
 
-### 1. lin34r.com (Website)
+### 1. l1near.com (Website)
 
 **Purpose**: Product marketing, sales, and customer dashboard
 
 ```
-lin34r-web/                      # Separate git repo
+l1near-web/                      # Separate git repo
 ├── src/
 │   ├── pages/
 │   │   ├── index.tsx            # Landing page (current design)
@@ -74,12 +74,12 @@ lin34r-web/                      # Separate git repo
 
 ---
 
-### 2. Graphyn Plugin (lin34r-plugin)
+### 2. Graphyn Plugin (l1near-plugin)
 
 **Purpose**: Desktop focus mode with OS-level locking
 
 ```
-lin34r-plugin/                   # Separate git repo, graphyn submodule
+l1near-plugin/                   # Separate git repo, graphyn submodule
 ├── src/
 │   ├── lib.rs                   # Plugin exports
 │   ├── plugin.rs                # Plugin + StreamingTask implementation
@@ -109,7 +109,7 @@ lin34r-plugin/                   # Separate git repo, graphyn submodule
 **Plugin Implementation**:
 
 ```rust
-// lin34r-plugin/src/plugin.rs
+// l1near-plugin/src/plugin.rs
 use graphyn_plugin_framework::{
     Plugin, StreamingTask, PluginContext, PluginResult,
     PluginEvent, PluginEventStream
@@ -122,8 +122,8 @@ pub struct Lin34rPlugin {
 
 #[async_trait]
 impl Plugin for Lin34rPlugin {
-    fn id(&self) -> &str { "lin34r" }
-    fn name(&self) -> &str { "LIN34R Focus Mode" }
+    fn id(&self) -> &str { "l1near" }
+    fn name(&self) -> &str { "L1NEAR Focus Mode" }
     fn version(&self) -> &str { env!("CARGO_PKG_VERSION") }
 
     async fn execute(&self, ctx: PluginContext) -> Result<PluginResult> {
@@ -185,12 +185,12 @@ impl StreamingTask for Lin34rPlugin {
 
 ---
 
-### 3. Physical Controller (lin34r-firmware)
+### 3. Physical Controller (l1near-firmware)
 
 **Purpose**: ESP32-S3 device that physically locks phones
 
 ```
-lin34r-firmware/                 # Separate git repo
+l1near-firmware/                 # Separate git repo
 ├── src/
 │   ├── main.cpp                 # Entry point
 │   ├── ble/
@@ -245,7 +245,7 @@ lin34r-firmware/                 # Separate git repo
 │       │         └── Windows: Focus Assist                                 │
 │       │                                                                   │
 │       ├──► [5] Connect BLE Controller (optional)                          │
-│       │         ├── Scan for "LIN34R-XXXX"                                │
+│       │         ├── Scan for "L1NEAR-XXXX"                                │
 │       │         ├── Connect GATT                                          │
 │       │         └── Send LOCK command                                     │
 │       │                                                                   │
@@ -310,7 +310,7 @@ lin34r-firmware/                 # Separate git repo
 │           │                                            │                  │
 │   [1] Focus Start                          [A] Idle (display off)        │
 │           │                                            │                  │
-│           ├──► Connect to LIN34R-XXXX                  │                  │
+│           ├──► Connect to L1NEAR-XXXX                  │                  │
 │           │                                            │                  │
 │           ├──► Write SYNC_TIMER (0x03)     ─────────►  │                  │
 │           │    { timerSeconds: 5400,                   │                  │
@@ -405,7 +405,7 @@ impl TaskQueue {
 
 ```
 graphyn-workspace/
-├── lin34r/                      # Plugin submodule
+├── l1near/                      # Plugin submodule
 │   ├── src/
 │   │   ├── lib.rs
 │   │   ├── plugin.rs            # Plugin + StreamingTask
@@ -426,7 +426,7 @@ graphyn-workspace/
 
 ---
 
-lin34r-web/                      # Website repo
+l1near-web/                      # Website repo
 ├── src/
 │   ├── pages/
 │   ├── components/              # Reuse current React components
@@ -435,7 +435,7 @@ lin34r-web/                      # Website repo
 
 ---
 
-lin34r-firmware/                 # Controller repo
+l1near-firmware/                 # Controller repo
 ├── src/
 │   ├── main.cpp
 │   ├── ble/
@@ -474,7 +474,7 @@ lin34r-firmware/                 # Controller repo
    - Lock/unlock commands
 
 4. **Phase 4**: Website & Marketplace
-   - Build lin34r.com marketing site
+   - Build l1near.com marketing site
    - Stripe checkout integration
    - Publish to Graphyn plugin marketplace
 

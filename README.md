@@ -1,7 +1,7 @@
 <div align="center">
-<img width="1200" height="475" alt="LIN34R Banner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+<img width="1200" height="475" alt="L1NEAR Banner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 
-# LIN34R
+# L1NEAR
 
 **Deep work productivity system with hardware flow control**
 
@@ -15,7 +15,7 @@ A focused productivity app that combines a React web interface with an ESP32 phy
 
 ## Overview
 
-LIN34R is a productivity system designed for developers who want to:
+L1NEAR is a productivity system designed for developers who want to:
 - **Focus deeply** with timed work sessions and enforced breaks
 - **Plan tasks** using voice-to-plan AI integration
 - **Track progress** with a daily scoring system
@@ -23,7 +23,7 @@ LIN34R is a productivity system designed for developers who want to:
 
 ## Dual Deployment Architecture
 
-LIN34R supports two deployment modes with a shared React codebase:
+L1NEAR supports two deployment modes with a shared React codebase:
 
 | Feature | Web Mode | Desktop Mode |
 |---------|----------|--------------|
@@ -47,7 +47,7 @@ LIN34R supports two deployment modes with a shared React codebase:
 │   Web Mode      │          │   Desktop Mode      │
 │   (Vite)        │          │   (Tauri + GPUI)    │
 │                 │          │                     │
-│ • Linear API    │          │ • lin34r plugin     │
+│ • Linear API    │          │ • l1near plugin     │
 │ • Web Bluetooth │          │ • whisper-rs        │
 │ • Timer/Planner │          │ • Multi-agent       │
 └─────────────────┘          └─────────────────────┘
@@ -94,7 +94,7 @@ LIN34R supports two deployment modes with a shared React codebase:
 ## Architecture
 
 ```
-lin34r/
+l1near/
 ├── App.tsx                     # Main app component
 ├── components/
 │   ├── Header.tsx              # Score display, device status
@@ -162,8 +162,8 @@ Service UUID: `0x4C49` ("LI" for Linear)
 
 ```bash
 # Clone repository
-git clone https://github.com/fuego-wtf/lin34r.git
-cd lin34r
+git clone https://github.com/fuego-wtf/l1near.git
+cd l1near
 
 # Install dependencies
 npm install
@@ -224,7 +224,7 @@ npm run preview  # Preview production build
 - [x] ESP32 firmware architecture
 
 ### Phase 4: Desktop Integration (In Progress)
-- [ ] Tauri shell with lin34r plugin
+- [ ] Tauri shell with l1near plugin
 - [ ] whisper-rs integration
 - [ ] Multi-agent orchestration (Graphyn framework)
 - [ ] Voice capture component
@@ -244,7 +244,7 @@ npm run preview  # Preview production build
 
 | Project | Description |
 |---------|-------------|
-| **lin34r-firmware** | ESP32 PlatformIO project (planned) |
+| **l1near-firmware** | ESP32 PlatformIO project (planned) |
 | **graphyn-desktop** | Desktop app shell (Rust/GPUI) |
 | **graphyn-plugin-framework** | Plugin architecture |
 | **graphyn-workspace** | Parent monorepo |

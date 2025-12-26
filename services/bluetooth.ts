@@ -1,13 +1,13 @@
 /**
- * LIN34R Web Bluetooth Service
+ * L1NEAR Web Bluetooth Service
  *
  * Handles connection, communication, and state management for the
- * LIN34R focus timer device via Web Bluetooth API.
+ * L1NEAR focus timer device via Web Bluetooth API.
  */
 
 import {
   SERVICE_UUIDS,
-  LIN34R_SERVICE_UUID,
+  L1NEAR_SERVICE_UUID,
   CHARACTERISTIC_UUIDS,
   Command,
   DeviceEvent,
@@ -146,7 +146,7 @@ export function checkBluetoothSupport(): { supported: boolean; error?: string } 
 // ============================================================================
 
 /**
- * Scan for and connect to a LIN34R device
+ * Scan for and connect to a L1NEAR device
  */
 export async function connectDevice(): Promise<boolean> {
   const support = checkBluetoothSupport();
@@ -163,11 +163,11 @@ export async function connectDevice(): Promise<boolean> {
   updateState({ connectionState: 'connecting', reconnectAttempts: 0 });
 
   try {
-    // Request device with LIN34R service filter
+    // Request device with L1NEAR service filter
     device = await navigator.bluetooth.requestDevice({
       filters: [
-        { services: [LIN34R_SERVICE_UUID] },
-        { namePrefix: 'LIN34R' },
+        { services: [L1NEAR_SERVICE_UUID] },
+        { namePrefix: 'L1NEAR' },
       ],
       optionalServices: [
         SERVICE_UUIDS.TIMER,
@@ -175,7 +175,7 @@ export async function connectDevice(): Promise<boolean> {
         SERVICE_UUIDS.SESSION,
         SERVICE_UUIDS.DEVICE_INFO,
         SERVICE_UUIDS.VOICE,
-        LIN34R_SERVICE_UUID,
+        L1NEAR_SERVICE_UUID,
       ],
     });
 
@@ -190,7 +190,7 @@ export async function connectDevice(): Promise<boolean> {
     // Listen for disconnection
     device.addEventListener('gattserverdisconnected', handleDisconnection);
 
-    updateState({ deviceName: device.name || 'LIN34R Device' });
+    updateState({ deviceName: device.name || 'L1NEAR Device' });
 
     // Connect to GATT server
     server = await device.gatt.connect();
@@ -232,7 +232,7 @@ async function setupServicesAndCharacteristics(): Promise<void> {
 
   try {
     // Get Session service (primary for commands/events)
-    sessionService = await server.getPrimaryService(LIN34R_SERVICE_UUID);
+    sessionService = await server.getPrimaryService(L1NEAR_SERVICE_UUID);
 
     // Get command characteristic
     commandCharacteristic = await sessionService.getCharacteristic(

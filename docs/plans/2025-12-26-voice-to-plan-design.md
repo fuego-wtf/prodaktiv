@@ -2,7 +2,7 @@
 
 ## Overview
 
-Voice-to-Plan transforms spoken task descriptions into structured development plans via the LIN34R physical controller. Developer pushes knob, speaks intent, releases - gets a crystal clear plan with Linear tasks.
+Voice-to-Plan transforms spoken task descriptions into structured development plans via the L1NEAR physical controller. Developer pushes knob, speaks intent, releases - gets a crystal clear plan with Linear tasks.
 
 ---
 
@@ -21,7 +21,7 @@ Voice-to-Plan transforms spoken task descriptions into structured development pl
 │     ┌───────────────────────────────────────────────────────────────────┐   │
 │     │                     GRAPHYN DESKTOP                                │   │
 │     │  ┌─────────────────────────────────────────────────────────────┐  │   │
-│     │  │  LIN34R Plugin                                              │  │   │
+│     │  │  L1NEAR Plugin                                              │  │   │
 │     │  │                                                             │  │   │
 │     │  │  ┌─────────────────────────────────────────────────────┐   │  │   │
 │     │  │  │ 🎙️ Recording...                              [STOP] │   │  │   │
@@ -79,7 +79,7 @@ Voice-to-Plan transforms spoken task descriptions into structured development pl
 │  │  │ Button │──┼─────────────────────► │  GRAPHYN DESKTOP               │  │
 │  │  └────────┘  │     VOICE_START       │                                │  │
 │  │              │     VOICE_STOP        │  ┌──────────────────────────┐  │  │
-│  │  ┌────────┐  │                       │  │  LIN34R Plugin           │  │  │
+│  │  ┌────────┐  │                       │  │  L1NEAR Plugin           │  │  │
 │  │  │ E-Ink  │◄─┼───────────────────────│  │                          │  │  │
 │  │  │Display │  │     State Updates     │  │  ┌────────────────────┐  │  │  │
 │  │  └────────┘  │                       │  │  │ VoiceCaptureView   │  │  │  │
@@ -283,7 +283,7 @@ Add new characteristic for voice commands:
 │                          BLE GATT EXTENSION                                  │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                              │
-│  Service: LIN34R (0x4C49)                                                    │
+│  Service: L1NEAR (0x4C49)                                                    │
 │                                                                              │
 │  Existing Characteristics:                                                   │
 │  ├── State      (0x4C50) - Read/Notify - Lock state, phone presence         │
@@ -333,10 +333,10 @@ Add new characteristic for voice commands:
 
 ## File Structure
 
-### Plugin (lin34r-plugin)
+### Plugin (l1near-plugin)
 
 ```
-lin34r-plugin/
+l1near-plugin/
 ├── src/
 │   ├── lib.rs
 │   ├── plugin.rs                    # Plugin + StreamingTask
@@ -374,10 +374,10 @@ lin34r-plugin/
 └── README.md
 ```
 
-### Firmware (lin34r-firmware)
+### Firmware (l1near-firmware)
 
 ```
-lin34r-firmware/
+l1near-firmware/
 ├── src/
 │   ├── main.cpp
 │   │
@@ -404,16 +404,16 @@ lin34r-firmware/
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                         LETTA AGENT: lin34r-planner                          │
+│                         LETTA AGENT: l1near-planner                          │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                              │
-│  Agent ID: lin34r-planner-{user_id}                                          │
+│  Agent ID: l1near-planner-{user_id}                                          │
 │  Type: memgpt_agent                                                          │
 │                                                                              │
 │  Core Memory Blocks:                                                         │
 │  ┌───────────────────────────────────────────────────────────────────────┐   │
 │  │ persona:                                                              │   │
-│  │   "I am a development planning assistant for LIN34R. I help          │   │
+│  │   "I am a development planning assistant for L1NEAR. I help          │   │
 │  │    developers break down spoken task descriptions into structured     │   │
 │  │    Linear issues with time estimates. I have context about the       │   │
 │  │    Graphyn workspace and can query the knowledge base for relevant   │   │
@@ -494,7 +494,7 @@ lin34r-firmware/
 
 | Task | Description | Estimate |
 |------|-------------|----------|
-| T-043 | Create lin34r-planner agent in Letta | 3h |
+| T-043 | Create l1near-planner agent in Letta | 3h |
 | T-044 | Define memory blocks schema | 2h |
 | T-045 | Implement planning tools (Linear, KB) | 4h |
 | T-046 | Task breakdown and estimation logic | 4h |

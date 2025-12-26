@@ -1,4 +1,4 @@
-# LIN34R BLE GATT Protocol Specification
+# L1NEAR BLE GATT Protocol Specification
 
 **Version:** 1.0.0
 **Date:** 2025-12-26
@@ -39,7 +39,7 @@
 
 ### Functional Description
 
-LIN34R is a physical focus timer companion device that:
+L1NEAR is a physical focus timer companion device that:
 - Displays current session state and timer on e-ink
 - Locks phone in compartment during focus sessions
 - Provides tactile dial control for timer adjustments
@@ -52,7 +52,7 @@ LIN34R is a physical focus timer companion device that:
 ### Device Identity
 
 ```
-Device Name:        "LIN34R-XXXX"  (XXXX = last 4 chars of MAC)
+Device Name:        "L1NEAR-XXXX"  (XXXX = last 4 chars of MAC)
 Appearance:         0x0540 (Generic Clock)
 Manufacturer ID:    0xFFFF (Development)
 ```
@@ -71,7 +71,7 @@ Manufacturer ID:    0xFFFF (Development)
 
 ```
 Bytes 0-2:    Flags (0x02 0x01 0x06)
-Bytes 3-15:   Complete Local Name "LIN34R-XXXX"
+Bytes 3-15:   Complete Local Name "L1NEAR-XXXX"
 Bytes 16-17:  Appearance (0x03 0x19 0x40 0x05)
 Bytes 18-21:  Service UUID (Timer Service - shortened)
 ```
@@ -103,7 +103,7 @@ Bytes 7:      Device State (see below)
 
 All custom UUIDs use the base:
 ```
-Base: XXXXXXXX-1234-5678-9ABC-LIN34RDEVICE
+Base: XXXXXXXX-1234-5678-9ABC-L1NEARDEVICE
 Format: XXXXXXXX-1234-5678-9ABC-4C494E333452
 ```
 
@@ -111,7 +111,7 @@ Format: XXXXXXXX-1234-5678-9ABC-4C494E333452
 
 ```
 +------------------------------------------+
-|           LIN34R Device                  |
+|           L1NEAR Device                  |
 +------------------------------------------+
 |                                          |
 |  +------------------------------------+  |
@@ -1143,7 +1143,7 @@ uint8_t crc8_fast(const uint8_t *data, size_t len) {
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0.0 | 2025-12-26 | LIN34R Team | Initial specification |
+| 1.0.0 | 2025-12-26 | L1NEAR Team | Initial specification |
 
 ---
 

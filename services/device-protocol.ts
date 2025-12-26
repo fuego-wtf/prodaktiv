@@ -1,8 +1,8 @@
 /**
- * LIN34R Device BLE Protocol Definitions
+ * L1NEAR Device BLE Protocol Definitions
  *
  * This module defines the GATT services, characteristics, commands,
- * and events for communicating with the LIN34R focus timer device.
+ * and events for communicating with the L1NEAR focus timer device.
  */
 
 // ============================================================================
@@ -22,8 +22,8 @@ export const SERVICE_UUIDS = {
   VOICE: '00004c53-0000-1000-8000-00805f9b34fb',
 } as const;
 
-// Custom LIN34R service UUID (for device filtering during scan)
-export const LIN34R_SERVICE_UUID = '4c494e34-5234-4c49-4e33-345200000001';
+// Custom L1NEAR service UUID (for device filtering during scan)
+export const L1NEAR_SERVICE_UUID = '4c494e34-5234-4c49-4e33-345200000001';
 
 // ============================================================================
 // Characteristic UUIDs

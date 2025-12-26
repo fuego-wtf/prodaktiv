@@ -1,13 +1,13 @@
-# LIN34R Architecture Decision
+# L1NEAR Architecture Decision
 
 ## Deployment Modes
 
-LIN34R has **two deployment modes**:
+L1NEAR has **two deployment modes**:
 
 ### Mode 1: Web (Marketing/Onboarding)
 
 ```
-lin34r.com (React web app)
+l1near.com (React web app)
 ├─ Landing page for new users
 ├─ Linear API integration (enter API key, manage tasks)
 ├─ Timer + Planner functionality
@@ -23,8 +23,8 @@ lin34r.com (React web app)
 
 ```
 graphyn-desktop (GPUI + Rust)
-└─ lin34r plugin (via graphyn-plugin-framework)
-   ├─ Full lin34r experience (embedded webview or native)
+└─ l1near plugin (via graphyn-plugin-framework)
+   ├─ Full l1near experience (embedded webview or native)
    ├─ ESP32 BLE hardware integration
    ├─ Local STT via whisper-rs
    ├─ Multi-agent orchestration
@@ -35,7 +35,7 @@ graphyn-desktop (GPUI + Rust)
 
 ## Plugin Framework Integration
 
-The `graphyn-plugin-framework` provides a **multi-agent interface** that lin34r (and other apps) can utilize:
+The `graphyn-plugin-framework` provides a **multi-agent interface** that l1near (and other apps) can utilize:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -48,7 +48,7 @@ The `graphyn-plugin-framework` provides a **multi-agent interface** that lin34r 
 │  └─ Multi-agent orchestration                                        │
 │                                                                      │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐ │
-│  │  lin34r     │  │  rayban     │  │  figma      │  │  linear     │ │
+│  │  l1near     │  │  rayban     │  │  figma      │  │  linear     │ │
 │  │  plugin     │  │  plugin     │  │  plugin     │  │  plugin     │ │
 │  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘ │
 │         │                │                │                │        │
@@ -77,14 +77,14 @@ The `graphyn-plugin-framework` provides a **multi-agent interface** that lin34r 
 
 ## Lin34r Plugin Structure
 
-When running inside graphyn-desktop, lin34r becomes a **plugin**:
+When running inside graphyn-desktop, l1near becomes a **plugin**:
 
 ```
 graphyn-workspace/
 ├─ desktop/              # graphyn-desktop (GPUI host)
 ├─ framework/            # graphyn-plugin-framework
 └─ plugins/
-   └─ lin34r/           # lin34r plugin
+   └─ l1near/           # l1near plugin
       ├─ Cargo.toml
       └─ src/
          ├─ lib.rs       # Plugin trait impl
@@ -97,7 +97,7 @@ graphyn-workspace/
 ### Plugin Implementation
 
 ```rust
-// plugins/lin34r/src/plugin.rs
+// plugins/l1near/src/plugin.rs
 
 use graphyn_plugin_framework::{Plugin, PluginContext, PluginResult, StreamingTask, PluginEvent};
 use async_trait::async_trait;
@@ -108,8 +108,8 @@ pub struct Lin34rPlugin {
 
 #[async_trait]
 impl Plugin for Lin34rPlugin {
-    fn id(&self) -> &str { "lin34r" }
-    fn name(&self) -> &str { "LIN34R Focus System" }
+    fn id(&self) -> &str { "l1near" }
+    fn name(&self) -> &str { "L1NEAR Focus System" }
     fn version(&self) -> &str { env!("CARGO_PKG_VERSION") }
 
     async fn execute(&self, ctx: PluginContext) -> Result<PluginResult> {
@@ -209,10 +209,10 @@ User: "Fix the authentication bug in the login flow"
 
 ## Shared Codebase Strategy
 
-The lin34r React codebase is **shared** between web and desktop:
+The l1near React codebase is **shared** between web and desktop:
 
 ```
-lin34r/
+l1near/
 ├─ src/                      # React components (shared)
 │  ├─ App.tsx
 │  ├─ components/
@@ -284,7 +284,7 @@ export const NowRail = () => {
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                    RAYBAN (Reference)         LIN34R (Target)       │
+│                    RAYBAN (Reference)         L1NEAR (Target)       │
 ├─────────────────────────────────────────────────────────────────────┤
 │  Frontend      React 18 + TypeScript         React 19 + TypeScript  │
 │  Styling       Tailwind CSS                  Tailwind CSS           │
@@ -351,7 +351,7 @@ export const NowRail = () => {
 ### Tauri Project Structure
 
 ```
-lin34r/
+l1near/
 ├── src/                          # Existing React frontend
 │   ├── App.tsx
 │   ├── components/
@@ -382,7 +382,7 @@ lin34r/
 
 ```toml
 [package]
-name = "lin34r-desktop"
+name = "l1near-desktop"
 version = "0.1.0"
 edition = "2021"
 
@@ -441,7 +441,7 @@ async fn create_linear_issue(draft: LinearTaskDraft, api_key: String) -> Result<
 
 #[tauri::command]
 async fn save_audio_recording(data: Vec<u8>, filename: String) -> Result<String, String> {
-    // Save to ~/Documents/LIN34R/recordings/
+    // Save to ~/Documents/L1NEAR/recordings/
     audio::save_recording(&data, &filename).map_err(|e| e.to_string())
 }
 
@@ -538,7 +538,7 @@ pub async fn transcribe(audio_path: &str) -> Result<TranscriptResult, Box<dyn st
     let samples = crate::audio::decode_to_pcm(path)?;
 
     // 2. Load Whisper model (cached)
-    let model_path = get_model_path()?;  // ~/.lin34r/models/whisper-base.en.bin
+    let model_path = get_model_path()?;  // ~/.l1near/models/whisper-base.en.bin
     let ctx = WhisperContext::new_with_params(&model_path, WhisperContextParameters::default())?;
 
     // 3. Run inference
@@ -576,7 +576,7 @@ pub async fn transcribe(audio_path: &str) -> Result<TranscriptResult, Box<dyn st
 
 fn get_model_path() -> Result<String, Box<dyn std::error::Error>> {
     let home = dirs::home_dir().ok_or("No home directory")?;
-    let model_dir = home.join(".lin34r").join("models");
+    let model_dir = home.join(".l1near").join("models");
     std::fs::create_dir_all(&model_dir)?;
 
     let model_path = model_dir.join("whisper-base.en.bin");
@@ -638,12 +638,12 @@ impl Plugin for SttPlugin {
 
 - All STT processing happens **locally** via whisper.cpp
 - No audio data leaves the device
-- Model files cached in `~/.lin34r/models/`
+- Model files cached in `~/.l1near/models/`
 - Only transcripts sent to AI for task parsing
 
 ## Next Steps
 
-1. [ ] Add Tauri to lin34r (`npm add @tauri-apps/cli @tauri-apps/api`)
+1. [ ] Add Tauri to l1near (`npm add @tauri-apps/cli @tauri-apps/api`)
 2. [ ] Create `src-tauri/` with Rust backend
 3. [ ] Implement `transcribe_audio` command with whisper-rs
 4. [ ] Build VoiceCapture.tsx with MediaRecorder

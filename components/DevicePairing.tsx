@@ -66,7 +66,7 @@ export const DevicePairing: React.FC<DevicePairingProps> = ({
             </div>
             <div>
               <h2 className="font-bold font-mono uppercase text-sm">Device Pairing</h2>
-              <p className="text-xs text-zinc-500 font-mono">LIN34R Physical Controller</p>
+              <p className="text-xs text-zinc-500 font-mono">L1NEAR Physical Controller</p>
             </div>
           </div>
           <button
@@ -141,7 +141,7 @@ const InstructionsContent: React.FC<{ onScan: () => void }> = ({ onScan }) => (
         </li>
         <li className="flex items-start gap-3">
           <span className="flex-shrink-0 w-6 h-6 bg-black text-white rounded-full flex items-center justify-center font-mono text-xs font-bold">3</span>
-          <span className="text-zinc-600 pt-0.5">Select "LIN34R" from the browser's device picker</span>
+          <span className="text-zinc-600 pt-0.5">Select "L1NEAR" from the browser's device picker</span>
         </li>
       </ol>
     </div>
@@ -176,7 +176,7 @@ const ScanningContent: React.FC = () => (
     <div>
       <h3 className="font-bold font-mono text-lg mb-2">Scanning...</h3>
       <p className="text-zinc-500 text-sm">
-        Looking for LIN34R device nearby
+        Looking for L1NEAR device nearby
       </p>
     </div>
 
@@ -194,7 +194,7 @@ const SuccessContent: React.FC = () => (
     <div>
       <h3 className="font-bold font-mono text-lg mb-2 text-green-600">Connected!</h3>
       <p className="text-zinc-500 text-sm">
-        LIN34R device paired successfully
+        L1NEAR device paired successfully
       </p>
     </div>
   </div>

@@ -24,7 +24,7 @@
 
 ## Overview
 
-LIN34R firmware transforms an ESP32-S3 into a deep work controller that:
+L1NEAR firmware transforms an ESP32-S3 into a deep work controller that:
 - Tracks focus sessions with hardware-enforced accountability
 - Locks user's phone during deep work (physical detention)
 - Captures voice for task creation via local STT
@@ -32,7 +32,7 @@ LIN34R firmware transforms an ESP32-S3 into a deep work controller that:
 
 ```
 +-------------------+     +-------------------+     +-------------------+
-|   LIN34R Device   |     |   Desktop App     |     |   Linear API      |
+|   L1NEAR Device   |     |   Desktop App     |     |   Linear API      |
 |   (ESP32-S3)      |<--->|   (Tauri/React)   |<--->|                   |
 |                   | BLE |                   | API |                   |
 +-------------------+     +-------------------+     +-------------------+
@@ -479,7 +479,7 @@ private:
 
 public:
     void begin() {
-        NimBLEDevice::init("LIN34R");
+        NimBLEDevice::init("L1NEAR");
         NimBLEDevice::setPower(ESP_PWR_LVL_P9);  // Max power
         NimBLEDevice::setSecurityAuth(true, true, true);  // Bonding
 
@@ -881,7 +881,7 @@ coredump, data, coredump,0x3F0000, 0x10000,
 ## Directory Structure
 
 ```
-lin34r-firmware/
+l1near-firmware/
 ├── platformio.ini
 ├── src/
 │   ├── main.cpp
@@ -930,7 +930,7 @@ lin34r-firmware/
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0.0 | 2025-12-26 | LIN34R Team | Initial architecture document |
+| 1.0.0 | 2025-12-26 | L1NEAR Team | Initial architecture document |
 
 ---
 

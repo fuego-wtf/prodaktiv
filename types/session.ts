@@ -1,5 +1,5 @@
 /**
- * Session State Machine Types for LIN34R
+ * Session State Machine Types for L1NEAR
  * Tasks: FCS-372, FCS-373
  *
  * This module defines a comprehensive state machine for managing focus sessions,
@@ -11,7 +11,7 @@
 // ============================================================================
 
 /**
- * SessionPhase represents the four core phases of the LIN34R workflow.
+ * SessionPhase represents the four core phases of the L1NEAR workflow.
  *
  * Phase Transitions:
  *   PLANNING -> FOCUS (user starts a session)

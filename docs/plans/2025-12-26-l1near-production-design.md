@@ -1,11 +1,11 @@
-# LIN34R Production Design
+# L1NEAR Production Design
 
 **Date**: 2025-12-26
 **Status**: In Progress
 
 ## Overview
 
-LIN34R is a productivity system combining:
+L1NEAR is a productivity system combining:
 1. **Web App** - React-based focus timer with Linear integration
 2. **Hardware Device** - ESP32-based phone locker with e-ink display
 
@@ -31,7 +31,7 @@ The device enforces focus by physically locking your phone during deep work sess
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        LIN34R SYSTEM                            │
+│                        L1NEAR SYSTEM                            │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │   ┌─────────────────┐         BLE          ┌─────────────────┐ │
@@ -84,7 +84,7 @@ The device enforces focus by physically locking your phone during deep work sess
 ## File Structure (After)
 
 ```
-lin34r/
+l1near/
 ├── App.tsx
 ├── types.ts                        # Updated with DeviceState
 ├── components/
@@ -101,7 +101,7 @@ lin34r/
 ├── firmware/
 │   └── protocol-spec.md            # NEW: Hardware team docs
 └── docs/plans/
-    └── 2025-12-26-lin34r-production-design.md
+    └── 2025-12-26-l1near-production-design.md
 ```
 
 ## BLE Protocol Summary
