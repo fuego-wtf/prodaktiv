@@ -115,13 +115,13 @@ use graphyn_plugin_framework::{
     PluginEvent, PluginEventStream
 };
 
-pub struct Lin34rPlugin {
+pub struct ProdaktivPlugin {
     mcp_client: McpClient,
     focus_state: Arc<Mutex<FocusState>>,
 }
 
 #[async_trait]
-impl Plugin for Lin34rPlugin {
+impl Plugin for ProdaktivPlugin {
     fn id(&self) -> &str { "prodaktiv" }
     fn name(&self) -> &str { "Prodaktiv Focus Mode" }
     fn version(&self) -> &str { env!("CARGO_PKG_VERSION") }
@@ -140,7 +140,7 @@ impl Plugin for Lin34rPlugin {
 }
 
 #[async_trait]
-impl StreamingTask for Lin34rPlugin {
+impl StreamingTask for ProdaktivPlugin {
     async fn execute_streaming(
         &self,
         ctx: PluginContext,
@@ -234,7 +234,7 @@ prodaktiv-firmware/                 # Separate git repo
 │  [1] User clicks "Start Focus" in Graphyn                                 │
 │       │                                                                   │
 │       ▼                                                                   │
-│  [2] Lin34rPlugin::execute_streaming() called                             │
+│  [2] ProdaktivPlugin::execute_streaming() called                             │
 │       │                                                                   │
 │       ├──► [3] Fetch Linear tasks via MCP                                 │
 │       │         mcp_client.invoke_tool("linear::list_issues", {...})      │
@@ -305,7 +305,7 @@ prodaktiv-firmware/                 # Separate git repo
 ├──────────────────────────────────────────────────────────────────────────┤
 │                                                                           │
 │   ┌───────────────┐         BLE          ┌───────────────────────────┐   │
-│   │ Lin34r Plugin │◄─────────────────────│ ESP32 Controller          │   │
+│   │ Prodaktiv Plugin │◄─────────────────────│ ESP32 Controller          │   │
 │   └───────┬───────┘                      └─────────────┬─────────────┘   │
 │           │                                            │                  │
 │   [1] Focus Start                          [A] Idle (display off)        │

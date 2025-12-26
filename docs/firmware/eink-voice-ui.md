@@ -2,7 +2,7 @@
 
 **Task**: FCS-411
 **Display**: 200x200 pixels, 1-bit (black/white)
-**Target Device**: Lin34r Focus Timer Hardware
+**Target Device**: Prodaktiv Focus Timer Hardware
 
 ---
 

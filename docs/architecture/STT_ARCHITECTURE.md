@@ -75,7 +75,7 @@ The `graphyn-plugin-framework` provides a **multi-agent interface** that prodakt
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-## Lin34r Plugin Structure
+## Prodaktiv Plugin Structure
 
 When running inside graphyn-desktop, prodaktiv becomes a **plugin**:
 
@@ -88,7 +88,7 @@ graphyn-workspace/
       ├─ Cargo.toml
       └─ src/
          ├─ lib.rs       # Plugin trait impl
-         ├─ plugin.rs    # Lin34rPlugin struct
+         ├─ plugin.rs    # ProdaktivPlugin struct
          ├─ stt.rs       # Whisper STT (from whisper-rs)
          ├─ voice.rs     # Voice capture + BLE events
          └─ planner.rs   # Multi-agent task planning
@@ -102,12 +102,12 @@ graphyn-workspace/
 use graphyn_plugin_framework::{Plugin, PluginContext, PluginResult, StreamingTask, PluginEvent};
 use async_trait::async_trait;
 
-pub struct Lin34rPlugin {
+pub struct ProdaktivPlugin {
     stt: crate::stt::WhisperSTT,
 }
 
 #[async_trait]
-impl Plugin for Lin34rPlugin {
+impl Plugin for ProdaktivPlugin {
     fn id(&self) -> &str { "prodaktiv" }
     fn name(&self) -> &str { "Prodaktiv Focus System" }
     fn version(&self) -> &str { env!("CARGO_PKG_VERSION") }
@@ -151,7 +151,7 @@ impl Plugin for Lin34rPlugin {
 }
 
 #[async_trait]
-impl StreamingTask for Lin34rPlugin {
+impl StreamingTask for ProdaktivPlugin {
     async fn execute_streaming(&self, ctx: PluginContext, tx: PluginEventSender) -> Result<PluginResult> {
         // For long-running voice capture, stream progress events
         tx.send(PluginEvent::started(self.id(), "voice_capture")).await.ok();
@@ -171,7 +171,7 @@ impl StreamingTask for Lin34rPlugin {
 
 ### Multi-Agent Orchestration
 
-Lin34r plugin can orchestrate multiple agents via the framework:
+Prodaktiv plugin can orchestrate multiple agents via the framework:
 
 ```
 Voice-to-Plan Multi-Agent Flow
@@ -181,7 +181,7 @@ User: "Fix the authentication bug in the login flow"
                     │
                     ▼
 ┌─────────────────────────────────────────────────────────────────────┐
-│  Lin34r Plugin (orchestrator)                                        │
+│  Prodaktiv Plugin (orchestrator)                                        │
 │  └─ execute("voice_to_plan", { audio: "..." })                      │
 └───────────────────────────────┬─────────────────────────────────────┘
                                 │

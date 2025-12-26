@@ -31,12 +31,12 @@ export const planDayFromTask = async (
   }
 
   const prompt = `
-    You are an expert productivity agent for the "Lin34r System" (part of the Graphyn.xyz ecosystem).
+    You are an expert productivity agent for the "Prodaktiv System" (part of the Graphyn.xyz ecosystem).
     
     The user wants to work on these task(s):
     ${taskContent}
     
-    Your goal is to break this into a compliant "Lin34r System" plan.
+    Your goal is to break this into a compliant "Prodaktiv System" plan.
     
     RULES:
     1. Main Objective: Must be a SINGLE "shippable slice". 

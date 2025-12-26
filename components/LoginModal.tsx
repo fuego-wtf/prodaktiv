@@ -29,7 +29,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ onComplete, onClose }) =
                     </div>
                     <h2 className="text-2xl font-bold font-mono tracking-tight">Connect Linear</h2>
                     <p className="text-gray-500 text-sm mt-2 leading-relaxed">
-                        To activate the Lin34r System, please enter your personal API key. 
+                        To activate the Prodaktiv System, please enter your personal API key. 
                         Your key is stored locally on your device.
                     </p>
                 </div>
