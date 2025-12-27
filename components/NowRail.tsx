@@ -77,8 +77,13 @@ export const NowRail: React.FC<NowRailProps> = ({
     }
   }, [log.currentPhase, log.timerSeconds, timer]);
 
-  // Auto-scroll chat
+  // Auto-scroll chat (skip initial render to prevent page scroll on load)
+  const isInitialMount = useRef(true);
   useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [log.sessionLog]);
 

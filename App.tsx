@@ -40,6 +40,12 @@ const App: React.FC = () => {
 
   // Load from local storage on mount
   useEffect(() => {
+    // Disable browser scroll restoration globally
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
     // Explicitly enforce LANDING view on fresh load
     setCurrentView('LANDING');
 
@@ -107,7 +113,10 @@ const App: React.FC = () => {
 
   const enterApp = () => {
       setCurrentView('APP');
-      // We do NOT save VIEW_KEY anymore to ensure landing page always shows on refresh
+      // Force scroll to top when entering app (immediate + delayed for async renders)
+      window.scrollTo(0, 0);
+      setTimeout(() => window.scrollTo(0, 0), 0);
+      setTimeout(() => window.scrollTo(0, 0), 100);
   };
 
   const handleEnterRequest = () => {
