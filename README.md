@@ -11,6 +11,8 @@ A focused productivity app that combines a React web interface with an ESP32 phy
 [![Platform](https://img.shields.io/badge/platform-web%20%7C%20desktop-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 
+**[Try the Beta →](https://prodaktiv-63fz2.ondigitalocean.app)**
+
 </div>
 
 ## Overview
@@ -185,6 +187,21 @@ GEMINI_API_KEY=your_gemini_key
 
 Linear API key is entered in the app settings after first launch.
 
+## Deployment
+
+The web app is deployed on **DigitalOcean App Platform**:
+
+```bash
+# Build & serve
+npm run build    # Vite production build
+npm start        # Node.js server (serves static + API)
+```
+
+**Stack:**
+- Vite build → `dist/`
+- Node.js server (`server.js`) serves static files + `/api/waitlist`
+- Auto-deploys on push to `main`
+
 ## Development
 
 ### Commands
@@ -192,6 +209,7 @@ Linear API key is entered in the app settings after first launch.
 npm run dev      # Start dev server (http://localhost:3000)
 npm run build    # Production build
 npm run preview  # Preview production build
+npm start        # Production server (port 8080)
 ```
 
 ### Tech Stack
