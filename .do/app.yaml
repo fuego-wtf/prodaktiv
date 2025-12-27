@@ -3,7 +3,7 @@ region: nyc
 services:
   - name: web
     github:
-      repo: fuego-wtf/prodaktiv
+      repo: resatu/prodaktiv
       branch: main
       deploy_on_push: true
     build_command: npm ci && npm run build
@@ -15,7 +15,11 @@ services:
       - path: /
     envs:
       - key: NODE_ENV
+        value: development
+        scope: BUILD_TIME
+      - key: NODE_ENV
         value: production
+        scope: RUN_TIME
       - key: LOOPS_API_KEY
         scope: RUN_TIME
         type: SECRET
