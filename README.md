@@ -6,8 +6,8 @@
 
 Hardware device + software system designed for uninterrupted deep work sessions.
 
-[![Try Beta](https://img.shields.io/badge/Try_Beta-Free-black?style=for-the-badge)](https://prodaktiv-63fz2.ondigitalocean.app)
-[![Hardware](https://img.shields.io/badge/Hardware-Q2_2025-blue?style=for-the-badge)]()
+[![Try Beta](https://img.shields.io/badge/Try_Beta-Free-black?style=for-the-badge)](https://prodaktiv.com)
+[![Hardware](https://img.shields.io/badge/Hardware-Q2_2026-blue?style=for-the-badge)]()
 
 </div>
 
@@ -44,7 +44,7 @@ Your phone is stealing 3+ hours of your productive day. App blockers don't work�
 - **Voice-to-plan** — speak your intent, get structured tasks
 - **Daily scoring** — track deep work, shipping, movement
 
-### The Hardware (Q2 2025)
+### The Hardware (Q2 2026)
 
 - **Physical phone lock** — solenoid-actuated dock holds your phone
 - **E-ink display** — see timer + current task, nothing else
@@ -60,13 +60,13 @@ npm install
 npm run dev
 ```
 
-Or just **[try the beta](https://prodaktiv-63fz2.ondigitalocean.app)** — no install required.
+Or just **[try the beta](https://prodaktiv.com)** — no install required.
 
 ## Waitlist
 
-Hardware pre-orders open Q1 2025. **$299** for the complete dock system.
+Hardware pre-orders open Q1 2026. **$299** for the complete dock system.
 
-[**Join the waitlist →**](https://prodaktiv-63fz2.ondigitalocean.app)
+[**Join the waitlist →**](https://prodaktiv.com)
 
 ---
 
