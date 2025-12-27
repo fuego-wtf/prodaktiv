@@ -1,5 +1,10 @@
 name: prodaktiv
 region: nyc
+domains:
+  - domain: prodaktiv.com
+    type: PRIMARY
+  - domain: www.prodaktiv.com
+    type: ALIAS
 services:
   - name: web
     github:
