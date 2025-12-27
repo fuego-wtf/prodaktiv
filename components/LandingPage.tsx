@@ -1,21 +1,32 @@
 import React, { useState, useEffect } from 'react';
-import { Lock, Loader2, Check, ArrowRight } from 'lucide-react';
+import { Lock, Loader2, Check, ArrowRight, Crosshair, Timer, Smartphone, Play } from 'lucide-react';
 
 export const LandingPage = ({ onEnter }: { onEnter: () => void }) => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle');
+  const [timerDisplay, setTimerDisplay] = useState('90:00');
 
   // Force page to start at top - disable browser scroll restoration
   useEffect(() => {
-    // Disable browser's scroll restoration
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
     }
-    // Immediate scroll
     window.scrollTo(0, 0);
-    // Delayed scroll to catch any async rendering
     const timeout = setTimeout(() => window.scrollTo(0, 0), 0);
     return () => clearTimeout(timeout);
+  }, []);
+
+  // Fake timer countdown for visual effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimerDisplay(prev => {
+        const [mins, secs] = prev.split(':').map(Number);
+        if (secs > 0) return `${mins}:${String(secs - 1).padStart(2, '0')}`;
+        if (mins > 0) return `${mins - 1}:59`;
+        return '90:00';
+      });
+    }, 1000);
+    return () => clearInterval(interval);
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -47,27 +58,30 @@ export const LandingPage = ({ onEnter }: { onEnter: () => void }) => {
   };
 
   return (
-    <div className="h-screen w-screen flex flex-col bg-white text-zinc-950 overflow-hidden">
-      {/* Header - Pinned Top */}
-      <header className="flex-shrink-0 h-14 border-b border-zinc-100 bg-white">
-        <div className="max-w-6xl mx-auto h-full flex items-center justify-between px-6">
-          <div className="flex items-center gap-2">
-            <div className="bg-zinc-950 text-white p-1.5 rounded">
-              <Lock size={16} strokeWidth={2.5} />
+    <div className="min-h-screen bg-gray-100 text-black">
+      {/* Header */}
+      <header className="bg-white border-b-2 border-black">
+        <div className="max-w-6xl mx-auto h-16 flex items-center justify-between px-6">
+          <div className="flex items-center gap-3">
+            <div className="bg-black text-white p-2 rounded">
+              <Lock size={18} strokeWidth={2.5} />
             </div>
-            <span className="text-base font-bold font-mono tracking-tight">PRODAKTIV</span>
+            <div>
+              <span className="text-lg font-bold font-mono tracking-tight">Prodaktiv</span>
+              <div className="text-[10px] font-mono text-gray-500 uppercase tracking-wider">Deep Work System</div>
+            </div>
           </div>
 
-          <nav className="flex items-center gap-6 text-sm">
+          <nav className="flex items-center gap-4">
             <button
               onClick={onEnter}
-              className="hidden sm:block text-zinc-500 hover:text-zinc-950 transition-colors"
+              className="hidden sm:block text-gray-600 hover:text-black font-mono text-sm"
             >
               Log in
             </button>
             <button
               onClick={onEnter}
-              className="bg-zinc-950 text-white px-4 py-2 rounded text-sm font-medium hover:bg-zinc-800 transition-colors"
+              className="bg-black text-white px-4 py-2 font-mono text-sm font-bold hover:bg-gray-800 transition-colors"
             >
               Get Started
             </button>
@@ -75,104 +89,107 @@ export const LandingPage = ({ onEnter }: { onEnter: () => void }) => {
         </div>
       </header>
 
-      {/* Main Content - Scrollable */}
-      <main className="flex-1 overflow-y-auto overflow-x-hidden">
-        {/* Hero Section */}
-        <section className="px-6 py-8 lg:py-12">
-          <div className="max-w-6xl mx-auto">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-8 lg:mb-12">
-              <span className="font-mono">Prodaktiv System.</span>{' '}
-              <span className="text-zinc-400">The complete deep work ecosystem.</span>
-            </h1>
-
-            {/* Product Hero - Laptop + Device */}
-            <div className="flex flex-col lg:flex-row items-end justify-center gap-6 lg:gap-12">
-              {/* Laptop Mockup */}
-              <div className="relative w-full max-w-md mx-auto lg:mx-0">
-                <div className="bg-zinc-900 rounded-t-xl p-1.5 pb-0">
-                  <div className="bg-zinc-950 rounded-t-lg overflow-hidden aspect-[16/10]">
-                    <div className="h-full p-3 font-mono text-[10px]">
-                      <div className="flex items-center justify-between mb-3 text-zinc-500">
-                        <span>PRODAKTIV</span>
-                        <span className="text-green-400">88:43</span>
-                      </div>
-                      <div className="space-y-2">
-                        <div className="text-zinc-400 text-[8px]">Friday, December 26</div>
-                        <div className="bg-zinc-900 rounded p-2 border border-zinc-800">
-                          <div className="text-zinc-300 text-[9px] mb-1">[WTF-147] Create BusAgent provider</div>
-                          <div className="text-zinc-600 text-[7px]">IN PROGRESS</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-zinc-800 h-2 rounded-b-xl"></div>
-                <div className="bg-zinc-700 h-0.5 w-1/3 mx-auto rounded-b"></div>
+      {/* Main Content */}
+      <main className="max-w-4xl mx-auto px-6 py-12">
+        {/* Hero - Focus Session Preview */}
+        <div className="border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12">
+          {/* Black Header Bar */}
+          <div className="bg-black text-white p-4 flex justify-between items-center">
+            <div className="flex items-center gap-3">
+              <Play size={20} className="animate-pulse" />
+              <div>
+                <h2 className="font-bold font-mono uppercase tracking-wider text-sm">Focus Session #1</h2>
+                <div className="text-xs font-mono opacity-80">Ship Your Work</div>
               </div>
-
-              {/* Hardware Device */}
-              <div className="flex-shrink-0 mx-auto lg:mx-0">
-                <div className="bg-gradient-to-b from-zinc-200 to-zinc-300 rounded-lg p-3 pb-2 shadow-lg">
-                  <div className="bg-zinc-800 rounded w-16 h-24 mb-2 flex items-center justify-center relative">
-                    <div className="absolute top-1.5 w-5 h-0.5 bg-zinc-700 rounded-full"></div>
-                    <div className="text-zinc-600 text-[6px] font-mono">PHONE</div>
-                    <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-red-500"></div>
-                  </div>
-                  <div className="flex justify-center">
-                    <div className="relative">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-b from-zinc-700 to-zinc-900 shadow-md flex items-center justify-center border-2 border-zinc-600">
-                        <div className="w-8 h-8 rounded-full bg-zinc-100 flex flex-col items-center justify-center">
-                          <span className="text-[5px] text-zinc-500 font-mono leading-none">LOCKED</span>
-                          <span className="text-zinc-900 font-mono text-[10px] font-bold">66:41</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-0.5 h-4 bg-zinc-400 mx-auto rounded-b"></div>
-              </div>
+            </div>
+            <div className="font-mono font-bold text-4xl tabular-nums">
+              {timerDisplay}
             </div>
           </div>
-        </section>
 
-        {/* Software + Hardware Cards */}
-        <section className="px-6 py-6 border-t border-zinc-100">
-          <div className="max-w-6xl mx-auto grid sm:grid-cols-2 gap-4">
-            <div className="bg-zinc-50 rounded-lg p-4 flex gap-4">
-              <div className="flex-shrink-0 w-16 h-12 bg-zinc-900 rounded overflow-hidden">
-                <div className="p-1.5 font-mono text-[4px] text-zinc-400">
-                  <div className="text-green-400">90:21</div>
-                </div>
-              </div>
-              <div className="min-w-0">
-                <h3 className="text-sm font-bold mb-0.5">The Software</h3>
-                <p className="text-zinc-500 text-xs">AI task management. Linear sync.</p>
-              </div>
+          {/* Blue Current Target */}
+          <div className="bg-blue-600 text-white p-4">
+            <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider opacity-80 mb-2">
+              <Crosshair size={12} className="animate-spin" style={{ animationDuration: '3s' }} />
+              <span>Current Target</span>
             </div>
-
-            <div className="bg-zinc-50 rounded-lg p-4 flex gap-4">
-              <div className="flex-shrink-0 w-16 h-12 bg-zinc-200 rounded flex items-center justify-center">
-                <div className="w-6 h-6 rounded-full bg-gradient-to-b from-zinc-600 to-zinc-800 flex items-center justify-center">
-                  <div className="w-4 h-4 rounded-full bg-zinc-100"></div>
-                </div>
-              </div>
-              <div className="min-w-0">
-                <h3 className="text-sm font-bold mb-0.5">The Hardware</h3>
-                <p className="text-zinc-500 text-xs">E-ink display. Phone lock.</p>
-              </div>
+            <div className="font-mono font-bold text-xl mb-3">
+              Lock your phone. Enter deep work.
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <span className="text-xs font-mono bg-white/20 px-2 py-1 rounded">Hardware + Software</span>
+              <span className="text-xs font-mono bg-white/10 px-2 py-1 rounded">90-min sessions</span>
+              <span className="text-xs font-mono bg-white/10 px-2 py-1 rounded">Linear sync</span>
             </div>
           </div>
-        </section>
+
+          {/* Task Queue Preview */}
+          <div className="p-4 bg-gray-50 border-t-2 border-black">
+            <div className="text-xs font-mono text-gray-500 uppercase tracking-wider mb-3 flex items-center gap-2">
+              <span className="w-3 h-3 border border-gray-300 rounded-full" />
+              Task Queue
+            </div>
+            <div className="space-y-2">
+              {['Physical phone dock locks device during session', 'E-ink display shows timer + current task', 'AI breaks down projects into focused sprints'].map((task, i) => (
+                <div key={i} className="flex items-center gap-3 text-sm font-mono text-gray-600">
+                  <span className="w-4 h-4 border-2 border-gray-300 rounded-full shrink-0" />
+                  {task}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Product Cards */}
+        <div className="grid sm:grid-cols-2 gap-6 mb-12">
+          <div className="border-2 border-black bg-white p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-black text-white flex items-center justify-center">
+                <Timer size={24} />
+              </div>
+              <div>
+                <h3 className="font-bold font-mono">The Software</h3>
+                <p className="text-xs font-mono text-green-600">Beta available now</p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-600 mb-4">AI task management with Linear sync. 90-minute deep work sessions with Pomodoro tracking.</p>
+            <button
+              onClick={onEnter}
+              className="w-full bg-black text-white py-3 font-mono font-bold text-sm hover:bg-gray-800"
+            >
+              Try Beta Free
+            </button>
+          </div>
+
+          <div className="border-2 border-black bg-white p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-blue-600 text-white flex items-center justify-center">
+                <Smartphone size={24} />
+              </div>
+              <div>
+                <h3 className="font-bold font-mono">The Hardware</h3>
+                <p className="text-xs font-mono text-gray-500">Shipping Q2 2025</p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-600 mb-4">E-ink display dock with physical phone lock mechanism. No notifications. No distractions.</p>
+            <button
+              disabled
+              className="w-full bg-gray-200 text-gray-500 py-3 font-mono font-bold text-sm cursor-not-allowed"
+            >
+              Pre-order $299 — Coming Soon
+            </button>
+          </div>
+        </div>
 
         {/* Waitlist Section */}
-        <section className="px-6 py-8 border-t border-zinc-100 bg-zinc-50">
-          <div className="max-w-sm mx-auto text-center">
-            <h2 className="text-xl font-bold mb-1">Join the Waitlist</h2>
-            <p className="text-zinc-500 text-xs mb-4">Hardware Q2 2025. Beta available now.</p>
+        <div className="border-2 border-black bg-blue-600 text-white p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12">
+          <div className="max-w-md mx-auto text-center">
+            <h2 className="font-mono font-bold text-2xl mb-2">Join the Waitlist</h2>
+            <p className="text-blue-100 text-sm mb-6">Hardware pre-orders opening Q1 2025</p>
 
             {status === 'success' ? (
-              <div className="flex items-center justify-center gap-2 text-green-600 text-sm font-medium py-2">
-                <Check size={16} />
+              <div className="flex items-center justify-center gap-2 bg-white text-blue-600 py-3 font-mono font-bold">
+                <Check size={18} />
                 <span>You're on the list.</span>
               </div>
             ) : (
@@ -181,51 +198,49 @@ export const LandingPage = ({ onEnter }: { onEnter: () => void }) => {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Email"
-                  className="flex-1 h-10 px-3 rounded bg-white border border-zinc-200 text-zinc-950 placeholder-zinc-400 text-sm focus:outline-none focus:border-zinc-400 transition-colors"
+                  placeholder="your@email.com"
+                  className="flex-1 h-12 px-4 bg-white text-black font-mono text-sm focus:outline-none"
                   disabled={status === 'loading'}
                 />
                 <button
                   type="submit"
                   disabled={status === 'loading' || !email}
-                  className="h-10 px-4 rounded bg-zinc-950 text-white text-sm font-medium hover:bg-zinc-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1.5"
+                  className="h-12 px-6 bg-black text-white font-mono font-bold text-sm hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                 >
                   {status === 'loading' ? (
-                    <Loader2 size={14} className="animate-spin" />
+                    <Loader2 size={16} className="animate-spin" />
                   ) : (
                     <>
-                      Join <ArrowRight size={12} />
+                      Join <ArrowRight size={14} />
                     </>
                   )}
                 </button>
               </form>
             )}
-
-            {/* CTA Buttons */}
-            <div className="grid grid-cols-2 gap-2 mt-6">
-              <button
-                onClick={onEnter}
-                className="h-10 rounded bg-zinc-950 text-white text-xs font-medium hover:bg-zinc-800 transition-colors"
-              >
-                Try Beta
-              </button>
-              <button
-                disabled
-                className="h-10 rounded bg-zinc-200 text-zinc-400 text-xs font-medium cursor-not-allowed"
-              >
-                Pre-order $299
-              </button>
-            </div>
           </div>
-        </section>
+        </div>
+
+        {/* Features */}
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[
+            { title: 'Phone Lock', desc: 'Physical dock locks your phone during sessions' },
+            { title: 'E-Ink Display', desc: 'See timer and current task without distractions' },
+            { title: 'Linear Sync', desc: 'Import tasks directly from your engineering workflow' },
+          ].map((feature) => (
+            <div key={feature.title} className="border-2 border-black bg-white p-4">
+              <h3 className="font-bold font-mono text-sm mb-1">{feature.title}</h3>
+              <p className="text-xs text-gray-600">{feature.desc}</p>
+            </div>
+          ))}
+        </div>
       </main>
 
-      {/* Footer - Pinned Bottom */}
-      <footer className="flex-shrink-0 h-12 border-t border-zinc-100 bg-white">
-        <div className="max-w-6xl mx-auto h-full flex items-center justify-between px-6 text-xs text-zinc-400">
-          <div className="flex items-center gap-1.5">
-            <Lock size={10} />
-            <span className="font-mono">PRODAKTIV</span>
+      {/* Footer */}
+      <footer className="border-t-2 border-black bg-white mt-12">
+        <div className="max-w-6xl mx-auto h-14 flex items-center justify-between px-6 text-xs text-gray-500 font-mono">
+          <div className="flex items-center gap-2">
+            <Lock size={12} />
+            <span>PRODAKTIV</span>
           </div>
           <div>© {new Date().getFullYear()} Graphyn</div>
         </div>
