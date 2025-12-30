@@ -47,6 +47,7 @@ Your phone is stealing 3+ hours of your productive day. App blockers don't work�
 ### The Hardware (Q2 2026)
 
 - **Physical phone lock** — solenoid-actuated dock holds your phone
+- **15W wireless charging** — Qi fast charge while locked, no battery anxiety
 - **E-ink display** — see timer + current task, nothing else
 - **Rotary knob** — start sessions, navigate tasks, trigger voice capture
 - **No notifications** — your phone is literally locked away

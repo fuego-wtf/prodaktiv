@@ -1,6 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { Lock, Loader2, Check, ArrowRight, Crosshair, Timer, Smartphone, Play } from 'lucide-react';
 
+// Hardware Specs - clean technical style
+const HardwareSpecs = () => (
+  <div className="font-mono text-xs space-y-1 text-gray-600">
+    <div className="flex justify-between border-b border-gray-200 pb-1">
+      <span>Display</span>
+      <span className="text-black">2.9" E-Ink</span>
+    </div>
+    <div className="flex justify-between border-b border-gray-200 pb-1">
+      <span>Charging</span>
+      <span className="text-black">15W Qi Wireless</span>
+    </div>
+    <div className="flex justify-between border-b border-gray-200 pb-1">
+      <span>Lock</span>
+      <span className="text-black">Solenoid Actuated</span>
+    </div>
+    <div className="flex justify-between border-b border-gray-200 pb-1">
+      <span>Input</span>
+      <span className="text-black">Rotary Encoder + Button</span>
+    </div>
+    <div className="flex justify-between">
+      <span>Material</span>
+      <span className="text-black">Brushed Aluminum</span>
+    </div>
+  </div>
+);
+
 export const LandingPage = ({ onEnter }: { onEnter: () => void }) => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle');
@@ -140,6 +166,41 @@ export const LandingPage = ({ onEnter }: { onEnter: () => void }) => {
           </div>
         </div>
 
+        {/* Hardware Hero Image with Labels */}
+        <div className="border-2 border-black bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mb-12 overflow-hidden">
+          <div className="relative">
+            <img
+              src="/og-image.jpg"
+              alt="Prodaktiv hardware dock - brushed aluminum with e-ink display and phone lock"
+              className="w-full"
+            />
+            {/* E-ink Display Label - points to screen on left */}
+            <div className="absolute top-[40%] left-[5%] flex items-center gap-2">
+              <span className="bg-black text-white text-[10px] sm:text-xs font-mono px-2 py-1">E-INK DISPLAY</span>
+              <div className="w-4 sm:w-8 h-[1px] bg-black"></div>
+            </div>
+            {/* Solenoid Lock Label - points to mechanical lock at bottom left */}
+            <div className="absolute top-[56%] left-[12%] flex items-center gap-2">
+              <span className="bg-blue-600 text-white text-[10px] sm:text-xs font-mono px-2 py-1">SOLENOID LOCK</span>
+              <div className="w-8 sm:w-16 h-[1px] bg-blue-600"></div>
+            </div>
+            {/* Phone Dock Label - points to phone area on right */}
+            <div className="absolute top-[38%] right-[5%] flex items-center gap-2">
+              <div className="w-16 sm:w-28 h-[1px] bg-black"></div>
+              <span className="bg-black text-white text-[10px] sm:text-xs font-mono px-2 py-1">PHONE DOCK</span>
+            </div>
+            {/* Rotary Knob Label - points to silver knob in center, right-aligned */}
+            <div className="absolute top-[52%] right-[26%] flex items-center gap-2">
+              <div className="w-8 sm:w-16 h-[1px] bg-blue-600"></div>
+              <span className="bg-blue-600 text-white text-[10px] sm:text-xs font-mono px-2 py-1">ROTARY KNOB</span>
+            </div>
+            {/* Material Label */}
+            <div className="absolute bottom-[8%] left-[50%] -translate-x-1/2">
+              <span className="bg-white/90 text-black text-[10px] sm:text-xs font-mono px-3 py-1 border border-black">BRUSHED ALUMINUM · 15W QI</span>
+            </div>
+          </div>
+        </div>
+
         {/* Product Cards */}
         <div className="grid sm:grid-cols-2 gap-6 mb-12">
           <div className="border-2 border-black bg-white p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
@@ -168,10 +229,12 @@ export const LandingPage = ({ onEnter }: { onEnter: () => void }) => {
               </div>
               <div>
                 <h3 className="font-bold font-mono">The Hardware</h3>
-                <p className="text-xs font-mono text-gray-500">Shipping Q2 2025</p>
+                <p className="text-xs font-mono text-gray-500">Shipping Q2 2026</p>
               </div>
             </div>
-            <p className="text-sm text-gray-600 mb-4">E-ink display dock with physical phone lock mechanism. No notifications. No distractions.</p>
+            <div className="mb-4 bg-gray-50 border border-gray-200 p-4">
+              <HardwareSpecs />
+            </div>
             <button
               disabled
               className="w-full bg-gray-200 text-gray-500 py-3 font-mono font-bold text-sm cursor-not-allowed"
@@ -185,7 +248,7 @@ export const LandingPage = ({ onEnter }: { onEnter: () => void }) => {
         <div className="border-2 border-black bg-blue-600 text-white p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12">
           <div className="max-w-md mx-auto text-center">
             <h2 className="font-mono font-bold text-2xl mb-2">Join the Waitlist</h2>
-            <p className="text-blue-100 text-sm mb-6">Hardware pre-orders opening Q1 2025</p>
+            <p className="text-blue-100 text-sm mb-6">Hardware pre-orders opening Q1 2026</p>
 
             {status === 'success' ? (
               <div className="flex items-center justify-center gap-2 bg-white text-blue-600 py-3 font-mono font-bold">
