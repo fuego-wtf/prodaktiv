@@ -175,28 +175,28 @@ export const LandingPage = ({ onEnter }: { onEnter: () => void }) => {
               className="w-full"
             />
             {/* E-ink Display Label - points to screen on left */}
-            <div className="absolute top-[40%] left-[5%] flex items-center gap-2">
-              <span className="bg-black text-white text-[10px] sm:text-xs font-mono px-2 py-1">E-INK DISPLAY</span>
-              <div className="w-4 sm:w-8 h-[1px] bg-black"></div>
+            <div className="absolute top-[32%] sm:top-[40%] left-[3%] sm:left-[5%] flex items-center gap-1 sm:gap-2">
+              <span className="bg-black text-white text-[8px] sm:text-xs font-mono px-1.5 sm:px-2 py-0.5 sm:py-1">E-INK</span>
+              <div className="hidden sm:block w-8 h-[1px] bg-black"></div>
             </div>
             {/* Solenoid Lock Label - points to mechanical lock at bottom left */}
-            <div className="absolute top-[56%] left-[12%] flex items-center gap-2">
-              <span className="bg-blue-600 text-white text-[10px] sm:text-xs font-mono px-2 py-1">SOLENOID LOCK</span>
-              <div className="w-8 sm:w-16 h-[1px] bg-blue-600"></div>
+            <div className="absolute top-[48%] sm:top-[56%] left-[3%] sm:left-[12%] flex items-center gap-1 sm:gap-2">
+              <span className="bg-blue-600 text-white text-[8px] sm:text-xs font-mono px-1.5 sm:px-2 py-0.5 sm:py-1">LOCK</span>
+              <div className="hidden sm:block w-16 h-[1px] bg-blue-600"></div>
             </div>
             {/* Phone Dock Label - points to phone area on right */}
-            <div className="absolute top-[38%] right-[5%] flex items-center gap-2">
-              <div className="w-16 sm:w-28 h-[1px] bg-black"></div>
-              <span className="bg-black text-white text-[10px] sm:text-xs font-mono px-2 py-1">PHONE DOCK</span>
+            <div className="absolute top-[32%] sm:top-[38%] right-[3%] sm:right-[5%] flex items-center gap-1 sm:gap-2">
+              <div className="hidden sm:block w-28 h-[1px] bg-black"></div>
+              <span className="bg-black text-white text-[8px] sm:text-xs font-mono px-1.5 sm:px-2 py-0.5 sm:py-1">DOCK</span>
             </div>
             {/* Rotary Knob Label - points to silver knob in center, right-aligned */}
-            <div className="absolute top-[52%] right-[26%] flex items-center gap-2">
-              <div className="w-8 sm:w-16 h-[1px] bg-blue-600"></div>
-              <span className="bg-blue-600 text-white text-[10px] sm:text-xs font-mono px-2 py-1">ROTARY KNOB</span>
+            <div className="absolute top-[48%] sm:top-[52%] right-[3%] sm:right-[26%] flex items-center gap-1 sm:gap-2">
+              <div className="hidden sm:block w-16 h-[1px] bg-blue-600"></div>
+              <span className="bg-blue-600 text-white text-[8px] sm:text-xs font-mono px-1.5 sm:px-2 py-0.5 sm:py-1">KNOB</span>
             </div>
             {/* Material Label */}
-            <div className="absolute bottom-[8%] left-[50%] -translate-x-1/2">
-              <span className="bg-white/90 text-black text-[10px] sm:text-xs font-mono px-3 py-1 border border-black">BRUSHED ALUMINUM · 15W QI</span>
+            <div className="absolute bottom-[5%] sm:bottom-[8%] left-[50%] -translate-x-1/2">
+              <span className="bg-white/90 text-black text-[8px] sm:text-xs font-mono px-2 sm:px-3 py-0.5 sm:py-1 border border-black whitespace-nowrap">ALUMINUM · 15W QI</span>
             </div>
           </div>
         </div>
