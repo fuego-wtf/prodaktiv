@@ -10,7 +10,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "node server.js"
+    "pages:dev": "wrangler pages dev dist"
   },
   "dependencies": {
     "@google/genai": "^1.34.0",
