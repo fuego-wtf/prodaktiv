@@ -57,8 +57,8 @@ Your phone is stealing 3+ hours of your productive day. App blockers don't workâ
 ```bash
 git clone https://github.com/fuego-wtf/prodaktiv.git
 cd prodaktiv
-npm install
-npm run dev
+bun install
+bun run dev
 ```
 
 Or just **[try the beta](https://prodaktiv.com)** â€” no install required.

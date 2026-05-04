@@ -643,7 +643,7 @@ impl Plugin for SttPlugin {
 
 ## Next Steps
 
-1. [ ] Add Tauri to prodaktiv (`npm add @tauri-apps/cli @tauri-apps/api`)
+1. [ ] Add Tauri to prodaktiv (`bun add @tauri-apps/cli @tauri-apps/api`)
 2. [ ] Create `src-tauri/` with Rust backend
 3. [ ] Implement `transcribe_audio` command with whisper-rs
 4. [ ] Build VoiceCapture.tsx with MediaRecorder
