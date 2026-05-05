@@ -1,21 +1,20 @@
 # KOSGEB Girişimci Destek Programı 2026/2 — Uygunluk ve Strateji Memorandumu
 
 **Başvuran şirket:** Prodaktiv (kurulacak TR LTD)
-**Ana şirket:** Fuego Labs LLC
+**Girişimci:** Resat Uğur Ulu (solo kurucu, %100 pay sahibi)
 **Çağrı:** Girişimci Destek Programı – İş Geliştirme Çağrısı 2026 Yılı 2. Dönem
 **Kaynak doküman:** UE.35 (11) GDP Uygulama Esasları — yürürlük 11/03/2026
 **Başvuru penceresi:** 20 Nisan – 8 Mayıs 2026
-**Bu memo tarihi:** 5 Mayıs 2026
 
 ---
 
 ## English Summary (TL;DR)
 
-You are eligible to apply if four conditions hold simultaneously: (1) you personally hold a valid **Uygulamalı Girişimcilik Eğitimi** certificate from KOSGEB, (2) a Turkish company is incorporated with you as ≥50% shareholder and the company is **0–3 years old** at application time, (3) the company's NACE code falls inside Sections C / 61 / 62 / 63 / 72, and (4) the legal applicant is the entrepreneur, not Fuego Labs LLC.
+Resat Uğur Ulu applies as solo entrepreneur. Eligibility holds if: (1) Resat personally has a valid **Uygulamalı Girişimcilik Eğitimi** certificate from KOSGEB, (2) Resat does not hold ≥%25 in any other tüzel kişi, (3) Prodaktiv TR LTD is incorporated with Resat as %100 founder under NACE 62.01.01, and the company is **0–3 years old** at application time.
 
-Recommended posture: **incorporate Prodaktiv as a TR LTD with Aysima as ≥50% founder under NACE 62.01.01 (Bilgisayar programlama faaliyetleri).** This unlocks 20K TL geri ödemesiz kuruluş desteği (vs 10K for şahıs), limits personal liability, lets Fuego Labs LLC hold a minority technology-license relationship, and — if Aysima is the named entrepreneur — adds a +150K TL kadın girişimci bonus on top of the headline 1.5M TL geri ödemeli ceiling. Total addressable envelope: **~2.0M TL**.
+Recommended posture: **incorporate Prodaktiv as a TR LTD with Resat as %100 founder under NACE 62.01.01 (Bilgisayar programlama faaliyetleri).** This unlocks 20K TL geri ödemesiz kuruluş desteği, limits personal liability, and presents the cleanest possible governance to the kurul — solo founder who built the product, owns 100%, no equity politics. Total addressable envelope: **2.000.000 TL** (no kadın/genç bonus since Resat is between 31–34).
 
-The hard constraint is the **Uygulamalı Girişimcilik Eğitimi certificate**. Without it, the application is rejected at the formal-completeness stage. Confirm whether Aysima already has one (KOSGEB e-Akademi or face-to-face). Everything else is shaped by that gate.
+The hard constraints are: (a) the **Uygulamalı Girişimcilik Eğitimi certificate** — without it the application is rejected at formal-completeness stage; (b) **no ≥%25 stake in any other tüzel kişi** — must be confirmed for Resat. Everything else flows from these two gates.
 
 ---
 
@@ -23,59 +22,61 @@ The hard constraint is the **Uygulamalı Girişimcilik Eğitimi certificate**. W
 
 | Parametre | Değer | Kaynak |
 |---|---|---|
-| Toplam destek üst limiti | 2.000.000 TL | KOSGEB resmi duyuru |
+| Toplam destek üst limiti (Plan B, bonussuz) | 2.000.000 TL | KOSGEB resmi duyuru |
 | Geri ödemeli üst limit | 1.500.000 TL | KOSGEB resmi duyuru |
 | Geri ödemesiz (kuruluş) – sermaye şirketi | 20.000 TL | KOSGEB resmi duyuru |
-| Geri ödemesiz (kuruluş) – gerçek kişi | 10.000 TL | KOSGEB resmi duyuru |
-| Pozitif ayrımcılık ek limiti | +150.000 TL (kadın/genç/engelli/gazi/şehit yakını) | KOSGEB resmi duyuru |
+| Geri ödemesiz (performans) — projeksiyon | ~480.000 TL | KOSGEB resmi duyuru, milestone bağlı |
+| Pozitif ayrımcılık (kadın/genç ≤30/engelli/gazi/şehit yakını) | +150.000 TL — Plan B'de KAPSAM DIŞI | UE.35 (11) |
 | Destek oranı | %80 | KOSGEB resmi duyuru |
 | Proje süresi | 36 ay | KOSGEB resmi duyuru |
 | Geri ödeme | Proje bitiminden 6 ay sonra başlar; 4 eşit taksit, üçer ay arayla | KOSGEB resmi duyuru |
 | Uygun NACE | C-İmalat, 61, 62, 63, 72 | UE.35 (11) |
 | İşletme yaşı | 0–3 yıl | UE.35 (11) |
-| Girişimci pay oranı | ≥%50 (doğrulanacak; bazı ikincil kaynaklar %25 söylüyor — birincilde teyit gerek) | UE.35 (11) — teyit |
+| Girişimcinin başvurduğu işletmede pay oranı | %50 üzerinde (≥%50) — konservatif | UE.35 (11) |
+| Girişimcinin başka tüzel kişide ortaklık yasağı | <%25 her tüzel kişide | UE.35 (11) |
 | Bilişim personeli aylık üst limit | 4× brüt asgari ücretin işverene maliyeti | UE.35 (11) |
-
-> **Belirsizlik notu:** Pay oranı kuralının %50 mi yoksa %25 mi olduğu ikincil kaynaklarda çelişkili. UE.35 (11) PDF'sinin tam metnini parse edemediğim için bu bir **doğrulama bağımlılığı** — başvurudan önce kosgeb.gov.tr birincil belgesinden teyit edilmeli. Stratejik tavsiye: %50 varsay, çünkü daha kısıtlayıcı olan eşik üzerinden plan yapmak güvenli.
 
 ---
 
-## 2 · Bağımlılık Sırası (Sıra, takvim değil)
+## 2 · Bağımlılık Sırası
 
 ```
-[A] Aysima'nın Uygulamalı Girişimcilik Eğitimi sertifikası
+[A] Resat'ın Uygulamalı Girişimcilik Eğitimi sertifikası
                 │
                 ├─ varsa → atlat
                 │
                 └─ yoksa → KOSGEB e-Akademi modülü tamamla → sertifika indir
                           ↓
-[B] Şirket türü ve NACE kodu kararı (LTD + 62.01.01 öneriliyor)
+[B] Resat'ın diğer tüzel kişilerdeki ortaklık doğrulaması (<%25)
                 ↓
-[C] MERSİS üzerinden ana sözleşme hazırlığı
+[C] Şirket türü ve NACE kodu kararı (LTD + 62.01.01 öneriliyor)
+                ↓
+[D] MERSİS üzerinden ana sözleşme hazırlığı
        │
        ├─ Sermaye taahhüdü: 50.000 TL minimum LTD
-       ├─ Aysima ≥%50 pay
+       ├─ Resat %100 pay
        └─ Adres (sanal ofis kabul)
                 ↓
-[D] Ticaret Sicili tescili → Ticaret Sicili Gazetesi ilanı
+[E] Ticaret Sicili tescili → Ticaret Sicili Gazetesi ilanı
                 ↓
-[E] Vergi levhası + SGK işyeri sicil + banka hesabı
+[F] Vergi levhası + SGK işyeri sicil + banka hesabı
                 ↓
-[F] KOBİ Bilgi Sistemi (KBS) işletme kaydı
+[G] KOBİ Bilgi Sistemi (KBS) işletme kaydı
                 ↓
-[G] Fuego Labs LLC ↔ Prodaktiv TR teknoloji lisans sözleşmesi
-       (Graphyn/Fuego IP'sine ayrıcalıklı erişim — kurul'a moat olarak sunulacak)
+[H] Fuego Labs LLC ↔ Prodaktiv TR teknoloji lisans sözleşmesi
+       (Graphyn/Fuego IP'sine ayrıcalıklı erişim — kurul'a moat olarak sunulacak;
+        pay sahipliği YOK, sadece lisans ilişkisi)
                 ↓
-[H] e-Devlet üzerinden başvuru → İş Planı yükle → "Başvuruyu Onayla"
+[I] e-Devlet üzerinden başvuru → İş Planı yükle → "Başvuruyu Onayla"
                 ↓
-[I] Kurul değerlendirme (sözlü savunma)
+[J] Kurul değerlendirme (sözlü savunma)
                 ↓
-[J] Kabul → 36 ay proje süresi → izleme → ödeme → 6 ay grace + 4 taksit geri ödeme
+[K] Kabul → 36 ay proje süresi → izleme → ödeme → 6 ay grace + 4 taksit geri ödeme
 ```
 
-**Kritik bağımlılık:** [A] olmadan hiçbir şey çalışmaz. [G] formal başvuru için zorunlu değil ama kurul değerlendirmesinde *yenilikçi yön* puanını yükselten en güçlü argüman.
+**Kritik bağımlılık:** [A] olmadan hiçbir şey çalışmaz. [B] de aynı seviyede kritik — Resat'ın hiçbir tüzel kişide ≥%25 payı olmaması şart.
 
-**Paralelleştirilebilir:** [B] ve [G] birlikte yürüyebilir. [E] altındaki banka hesabı ile vergi levhası eş zamanlı.
+**Plan B avantajı:** Pay yapısı %100 Resat olduğu için "girişimcinin asgari pay oranı" kuralı (≥%50 veya ≥%25) konservatif yorumda bile rahatlıkla geçer.
 
 ---
 
@@ -90,7 +91,7 @@ The hard constraint is the **Uygulamalı Girişimcilik Eğitimi certificate**. W
 | Yatırım alabilirlik (gelecek raise) | düşük | iyi | en iyi |
 | KOSGEB değerlendirmede algı | "küçük girişim" | "ciddi girişim" | overkill |
 
-**Tavsiye: LTD.** İki kat geri ödemesiz destek (10K → 20K), kişisel mal varlığını koruma, ileride Fuego Labs LLC ile yapılacak teknoloji lisans sözleşmesinin tüzel kişilik düzeyinde temiz görünmesi, ve kurul tarafından "ciddi girişim" olarak algılanma — hepsi LTD'yi haklı çıkarıyor. A.Ş. asgari sermayesi (250K TL) bu aşama için aşırı.
+**Tavsiye: LTD.** İki kat geri ödemesiz destek (10K → 20K), kişisel mal varlığını koruma, ileride Fuego Labs LLC ile yapılacak teknoloji lisans sözleşmesinin tüzel kişilik düzeyinde temiz görünmesi, ve kurul tarafından "ciddi girişim" olarak algılanma — hepsi LTD'yi haklı çıkarıyor.
 
 ---
 
@@ -106,50 +107,54 @@ Prodaktiv hibrit bir ürün: yazılım + donanım. Uygun NACE kodu seçenekleri:
 | 63.11.01 | Veri işleme, barındırma | Cloud altyapı tarafına işlerse |
 | 26.30.04 | Telsiz/radyo/iletişim cihazları imalatı | ESP32 dock donanımı için olası — ama imalat kıyısı |
 
-**Tavsiye: Birincil 62.01.01, ikincil 62.09.01.** Donanım üretimi (ESP32 dock) ana iş tanımı değil; bu, *yazılım şirketinin sattığı bir aksesuar* olarak konumlandırılır. NACE 62 grubu KOSGEB için en güvenilir ve en yüksek kabul oranlı sektör. İmalat NACE'sine girersen *Yapı / İmalat sınıfı denetim* yükümlülükleri açılır — gerek yok.
+**Tavsiye: Birincil 62.01.01, ikincil 62.09.01.** Donanım üretimi (ESP32 dock) ana iş tanımı değil; bu, *yazılım şirketinin sattığı bir aksesuar* olarak konumlandırılır. NACE 62 grubu KOSGEB için en güvenilir ve en yüksek kabul oranlı sektör.
 
 ---
 
-## 5 · Girişimci Profili Kararı (Stratejik Çatallanma)
+## 5 · Girişimci Profili
 
-Bu memorandumun en önemli karar noktası. KOSGEB programı **tüzel kişiye değil, gerçek kişi girişimciye verilir** — şirket sadece destek aracıdır. Yani başvuruyu kim adına yapacağın **doğrudan toplam destek miktarını ve kurul puanını etkiliyor**.
+**Resat Uğur Ulu — Solo Kurucu (%100 pay sahibi).**
 
-| Senaryo | Mantık | Toplam destek tavanı | Kurul ek puanı |
-|---|---|---|---|
-| **A) Aysima girişimci** | Kadın girişimci → +150K bonus + kadın ek puanı | **2.150.000 TL** | Yüksek |
-| B) Resat girişimci | Genç girişimci (yaş ≤30 ise) → +150K bonus | 2.150.000 TL | Orta |
-| C) Resat girişimci, ≥30 | Standart | 2.000.000 TL | Standart |
+KOSGEB programı tüzel kişiye değil gerçek kişi girişimciye verilir. Plan B'de yapı tek kuruculu (solo founder), %100 Resat pay sahibi.
 
-**Tavsiye: Senaryo A — Aysima ≥%50 pay sahibi olarak girişimci.** Hem +150K parasal kazanç hem kurul'da kadın girişimci ek puanı. Resat ise teknik kurucu / CTO olarak ortak yapısında <%50 pay ile yer alır, **Fuego Labs LLC'nin Türkiye'deki teknoloji partneri** olarak konumlandırılır. Bu yapı KOSGEB'e doğal görünür ve birden fazla mevcut Türk teknoloji girişiminde kullanılan bir kalıptır.
+Pozitif ayrımcılık avantajları:
+- Kadın girişimci: kapsam dışı
+- Genç girişimci (≤30 yaş): kapsam dışı (Resat 31–34 aralığında)
+- Engelli/gazi/şehit yakını: durum bilinmiyorsa varsayılan dışı
 
-**Şart:** Aysima'nın aktif Uygulamalı Girişimcilik Eğitimi sertifikası olması. Eğer yoksa, KOSGEB e-Akademi modülü ~32 saatlik içerik — başvuru penceresi içinde tamamlanması mümkün ama sıkı.
+**Toplam destek tavanı: 2.000.000 TL.** Bonus mekanizması Plan B'de aktif değil. Bu, 2.150.000 TL'lik Plan A tavanından 150K TL düşüktür — kabul edilebilir bir maliyet, çünkü pay yapısının temizliği başvuru riskini sıfıra indirir.
+
+**Solo kurucu yapısının kurul'a iyi görünmesi:**
+- Pay politikası yok (tek kişi, tek karar mekanizması)
+- "Kim ne kadar çalıştı, kim ne aldı" sorularına yer yok
+- Resat ürünün gerçek inşacısı — dogfooding ve kod tabanı doğrudan onun
+- Togg deneyimi (otomotiv embedded, 20 milyar USD değerlemesinde Türk EV üreticisi) güçlü kanıt
+- Compound newsletter + Graphyn altyapısı — yapay zekâ ekosisteminde aktif yapımcı
 
 ---
 
-## 6 · Fuego Labs ↔ Prodaktiv TR İlişki Yapısı
+## 6 · Fuego Labs ↔ Prodaktiv TR İlişki Yapısı (Plan B)
 
 Kurul'a sunulacak yapı:
 
 ```
-Fuego Labs LLC (US ana şirket)
+Fuego Labs LLC (US ana şirket — Resat ile pay sahipliği ilişkisi YOK
+                veya <%25; başvuru anında doğrulanacak)
        │
-       │ — IP / teknoloji lisans sözleşmesi
+       │ — IP / teknoloji lisans sözleşmesi (sadece bu)
        │ — Graphyn agent platformuna ayrıcalıklı erişim
-       │ — minoritery hisse (opsiyonel, %≤49)
+       │ — Pay sahipliği YOK (Plan B'de Fuego Labs'ın Prodaktiv'de payı yok)
        ▼
 Prodaktiv TR LTD (KOSGEB başvuranı)
-       Aysima %≥50 (kadın girişimci, kurul'da puanlanacak)
-       Resat %  (teknik ortak)
-       Fuego Labs LLC %  (minoritery, opsiyonel)
+       Resat Uğur Ulu %100
 ```
 
-**Niye bu yapı kurul'a iyi görünüyor:**
-- "Yenilikçi yön" puanlaması için Graphyn'ın varlığı *kanıtlanabilir bir teknolojik moat* sağlıyor — sıradan bir productivity SaaS'ından ayırıyor
-- Fuego Labs LLC'nin minority pozisyonu Türkiye operasyonunun bağımsızlığını gösterirken yabancı sermaye girişi mesajı veriyor (KOSGEB bunu *düşük puanlı pozitif sinyal* olarak görür, yüksek puanlı değil — abartmamak lazım)
-- Aysima'nın çoğunluk pay kontrolü %50 kuralını rahatlıkla geçirir
+**Plan B'nin temizliği:**
+- Fuego Labs LLC'nin Prodaktiv'de payı yok → "transfer pricing" şüphesi sıfır
+- Sadece teknoloji lisans sözleşmesi → moat hala anlatılabilir, ama equity karmaşası yok
+- Kurul'a tek bir kişi tek bir görüşle yanıt verir → "ortaklar arasında uyumsuzluk" riski yok
 
-**Niye bu yapı kötü görünebilir (azaltma stratejisi):**
-- "Esas iş yurt dışında, Türkiye sadece destek almak için açılmış" şüphesi — *mitigation:* Prodaktiv ürününün Türkiye merkezli geliştirildiğini, ESP32 donanım tedarik zinciriyle yerli üretici ortaklıklarını, ve hedef pazarın global ama TR'den yönetildiğini iş planında somut göstergelerle anlat (TR'li müşteri sayısı, TR'li tedarikçi sözleşmeleri, TR'de istihdam edilecek personel sayısı)
+**Kritik doğrulama:** Resat'ın Fuego Labs LLC'deki pay oranının <%25 olması zorunlu. Eğer ≥%25 ise, Aysima durumunda olduğu gibi avukat görüşü alınmalı veya Plan C (2027/1 dönem) devreye girer.
 
 ---
 
@@ -157,23 +162,23 @@ Prodaktiv TR LTD (KOSGEB başvuranı)
 
 | Risk | Olasılık | Etki | Azaltma |
 |---|---|---|---|
-| Aysima'da Uygulamalı Girişimcilik Eğitimi sertifikası yok | Bilinmiyor — TEYİT GEREK | KRİTİK (başvuru reddi) | Bugün e-Akademi'de modüle başla |
+| Resat'ta Uygulamalı Girişimcilik Eğitimi sertifikası yok | Bilinmiyor — TEYİT GEREK | KRİTİK (başvuru reddi) | e-Devlet üzerinden 2 dakikada sorgulanabilir; yoksa e-Akademi modülü hızlıca başlatılır |
+| Resat'ın Fuego Labs LLC'de ≥%25 payı | Bilinmiyor — TEYİT GEREK | KRİTİK (diskalifiye) | Avukat görüşü veya Plan C |
 | 8 Mayıs 2026 son tarihine yetişememe | Orta | KRİTİK (1. dönem 2027'ye sarkar) | LTD kuruluşunu acil başlat — MERSİS başvurusu paralel |
-| Pay oranı kuralı %50 yerine %25 çıkarsa kurul'da soru olur | Düşük | Düşük | Birincilden teyit ettikten sonra net cevap hazırla |
 | NACE kodu sonradan değişmek istenirse | Düşük | Orta | İlk seferde 62.01.01 + 62.09.01 olarak iki kod birden tescil ettir |
-| Fuego Labs LLC ile lisans sözleşmesi kurul'a "transfer pricing" gibi görünürse | Orta | Orta | Sözleşmede *piyasa fiyatı* royalty oranı (örn. yıllık net gelirin %X'i) ve *bağımsız yönetim* maddeleri olsun |
-| Geri ödemeli desteği geri ödeyememe (proje sonunda gelir yetersiz) | Orta | Yüksek (yasal takip) | Finansal projeksiyonlarda muhafazakar gelir senaryosu altında bile geri ödeme kapasitesini göster |
+| Fuego Labs LLC ile lisans sözleşmesi kurul'a "transfer pricing" gibi görünürse | Düşük (pay sahipliği yok) | Düşük | Sözleşmede *piyasa fiyatı* royalty oranı ve *bağımsız yönetim* maddeleri olsun |
+| Geri ödemeli desteği geri ödeyememe | Orta | Yüksek (yasal takip) | Finansal projeksiyonlarda muhafazakar gelir senaryosu altında bile geri ödeme kapasitesini göster |
 | Donanım tedarik zinciri (ESP32, e-ink) gecikme | Yüksek | Orta | İş planında donanımı *Faz 2* olarak konumlandır; Faz 1 = yazılım, gelir yazılımdan başlar |
 
 ---
 
-## 8 · Sonraki Adımlar (Bu Memo'dan Sonra)
+## 8 · Sonraki Adımlar
 
-Bu memo onaylandığında 4 numaralı görev (Bütçe & gider planı) açılır. Bütçe; Bölüm 4'te belirlenen NACE altında izin verilen destek kalemlerine somut TL tutarları yerleştirir. Bütçe + bu memo birlikte 5 numaralı görevin (Türkçe iş planı tam metni) girdisi olur.
+Bu memo onaylandığında 4 numaralı görev (Bütçe & gider planı) Plan B'ye göre kalibre edilmiş haliyle aktif olur. Bütçe + bu memo birlikte 5 numaralı görevin (Türkçe iş planı tam metni) girdisi olur.
 
 **Karar bekleyenler:**
-1. Aysima'nın Uygulamalı Girişimcilik Eğitimi sertifikası durumu (var/yok/alınacak)
-2. Senaryo A onayı (Aysima girişimci, kadın girişimci avantajı kullanılacak)
+1. Resat'ın Uygulamalı Girişimcilik Eğitimi sertifikası durumu (var/yok/alınacak)
+2. Resat'ın Fuego Labs LLC ve diğer tüzel kişilerdeki pay durumu (<%25 zorunlu)
 3. NACE kodu seçimi onayı (62.01.01 birincil + 62.09.01 ikincil)
 4. LTD kuruluşunun başvuru penceresi içinde tamamlanmasına ilişkin pratik onay (sermaye, adres, noter randevusu)
 
@@ -185,5 +190,4 @@ Bu memo onaylandığında 4 numaralı görev (Bütçe & gider planı) açılır.
 - [Girişimci Destek Programı – KOSGEB ana sayfa](https://www.kosgeb.gov.tr/site/tr/genel/destekdetay/1231/girisimci-destek-programi)
 - [UE.35 (11) GDP Uygulama Esasları PDF — 11/03/2026](https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/Giri%C5%9Fimcilik/2026/2026.03.11/UE.35_(11)_GDP_Uygulama_-_Esaslar%C4%B1.pdf)
 - [Girişimcilere 2 milyon TL destek! Son başvuru tarihi 8 Mayıs – Bigpara](https://bigpara.hurriyet.com.tr/haberler/ekonomi-haberleri/girisimcilere-2-milyon-tl-destek-son-basvuru-tarihi-8-mayis_ID100701028/)
-- [KOSGEB Girişimci Destek Programı 2026 Yılı Uygulama Esasları – SER Danışmanlık](https://sd.com.tr/kosgeb-girisimci-destek-programi-2026-yili-uygulama-esaslari-ve-basvuru-surecleri/)
 - [KOSGEB Girişimci Destek Programı: 2026 Başvuru Rehberi – Kobitime](https://kobitime.com/kosgeb-girisimci-destek-programi-basvuru-ve-sartlar/)

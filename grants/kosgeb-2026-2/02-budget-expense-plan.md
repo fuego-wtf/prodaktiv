@@ -1,21 +1,21 @@
 # Prodaktiv KOSGEB Bütçe ve Gider Planı (36 Ay)
 
-**Toplam destek hedefi:** 2.150.000 TL (1.500.000 geri ödemeli + 500.000 geri ödemesiz + 150.000 kadın girişimci ek)
-**Destek oranı:** %80 — Prodaktiv'in özkaynak katkısı asgari %20 = ~537.500 TL
+**Toplam destek hedefi:** 2.000.000 TL (1.500.000 geri ödemeli + 500.000 geri ödemesiz)
+**Bonus:** Plan B'de aktif değil (Resat 31–34 yaş, kadın/genç bonusu kapsam dışı)
+**Destek oranı:** %80 — Prodaktiv'in özkaynak katkısı asgari %20 = 500.000 TL
 **Proje süresi:** 36 ay
 **Para birimi:** Türk Lirası (TL), 2026 Q2 fiyatları
+**Girişimci:** Resat Uğur Ulu (%100 pay sahibi)
 
 ---
 
-## Bölüm A — Geri Ödemesiz Kalem Tahsisi (650.000 TL)
+## Bölüm A — Geri Ödemesiz Kalem Tahsisi (500.000 TL)
 
 | Kalem | Tutar (TL) | Gerekçe |
 |---|---:|---|
 | Kuruluş desteği (sermaye şirketi statüsü) | 20.000 | UE.35 (11) sermaye şirketi tabanı — otomatik |
 | Performans desteği (işletme aktivitesi/istihdam) | 480.000 | Yıllık gelir + istihdam hedefleri tutturuldukça |
-| **Standart geri ödemesiz alt toplam** | **500.000** | |
-| Kadın girişimci ek desteği | 150.000 | Aysima ≥%50 pay sahibi kadın kurucu |
-| **Geri ödemesiz toplam** | **650.000** | |
+| **Geri ödemesiz toplam** | **500.000** | |
 
 > **Not:** Performans desteği KOSGEB'in *istihdam yaratan girişim* metriğine bağlıdır. Üst limiti 36 ay boyunca peyderpey serbest bırakılır; kurul'a sunulan iş planında 36. ay sonu için 5–7 tam zamanlı istihdam taahhüdü vermek bu kalemin tamamını açar.
 
@@ -30,13 +30,13 @@ Bilişim sektörü personeli için aylık üst limit = 4 × brüt asgari ücreti
 
 | Pozisyon | Süre (ay) | Aylık talep edilen destek (TL) | Toplam (TL) |
 |---|---:|---:|---:|
-| Senior Backend Engineer (Go/Rust) | 24 | 120.000 | 2.880.000 (talep edilen 250.000) |
-| Frontend Engineer (React/TS) | 24 | 95.000 | 2.280.000 (talep edilen 200.000) |
-| Embedded Engineer (ESP32-S3 / firmware) | 24 | 110.000 | 2.640.000 (talep edilen 200.000) |
-| Product Designer | 18 | 85.000 | 1.530.000 (talep edilen 100.000) |
+| Senior Backend Engineer (Go/Rust) | 24 | 120.000 | (talep edilen 250.000) |
+| Frontend Engineer (React/TS) | 24 | 95.000 | (talep edilen 200.000) |
+| Embedded Engineer (ESP32-S3 / firmware) | 24 | 110.000 | (talep edilen 200.000) |
+| Product Designer | 18 | 85.000 | (talep edilen 100.000) |
 | **Personel alt toplamı** | | | **750.000** |
 
-> Her pozisyon için aylık tutarlar 4× brüt asgari ücret tavanının çok altında — kurul'a *makul* görünür, ve maaşların geri kalan kısmını şirket özkaynağından karşıladığını gösterir (KOSGEB %80 destek oranı için bu zaten zorunlu).
+> Her pozisyon için aylık tutarlar 4× brüt asgari ücret tavanının altında — kurul'a *makul* görünür ve maaşların geri kalan kısmının özkaynaktan karşılandığını gösterir.
 
 ### B.2 — Makine, Teçhizat, Yazılım (yaklaşık tahsis: 350.000 TL)
 
@@ -49,22 +49,22 @@ Bilişim sektörü personeli için aylık üst limit = 4 × brüt asgari ücreti
 | Yazılım lisansları (JetBrains, Figma Org, Linear Business, GitHub Enterprise) | 36 ay | — | 90.000 |
 | Cloud altyapı (AWS/Cloudflare/Vercel — geliştirme, staging, prod) | 36 ay | — | 120.000 |
 | Tasarım & üretim CAD lisansı (Fusion 360 / KiCAD eklentileri) | 36 ay | — | 35.000 |
-| **Makine-Teçhizat-Yazılım alt toplamı** | | | **665.000** |
+| **Listelenen toplam** | | | **665.000** |
 
-> Üst limitin üzerinde gözüküyor — talep tutarı 350.000 TL'ye **kalibre edilecek** (en yüksek kalemler iş istasyonu + cloud + lehim ekipmanı). Geri kalan 315.000 TL özkaynaktan karşılanır.
+> Talep tutarı 350.000 TL'ye **kalibre edilecek** (en yüksek kalemler iş istasyonu + cloud + lehim ekipmanı). Geri kalan 315.000 TL özkaynaktan karşılanır.
 
 ### B.3 — Hizmet Alımı (yaklaşık tahsis: 400.000 TL)
 
 | Alt kalem | Tutar (TL) |
 |---|---:|
 | Eğitim (girişimcilik bootcamp, embedded güvenlik sertifikasyonu) | 50.000 |
-| Danışmanlık ve yönderlik (hukuk: KVKK, KVKK-ek, sözleşme; muhasebe; vergi) | 80.000 |
+| Danışmanlık ve yönderlik (hukuk: KVKK, sözleşme; muhasebe; vergi) | 80.000 |
 | Belgelendirme (CE marking — donanım için, FCC, ISO/IEC 27001 — yazılım için) | 100.000 |
 | Test ve analiz (EMC test, donanım güvenlik audit, yazılım pen-test) | 60.000 |
 | Pazarlama (içerik üretimi, konferans katılımı, hedefli dijital reklam) | 80.000 |
 | Tasarım (endüstriyel tasarım — dock; marka kimliği) | 50.000 |
 | Sınai mülkiyet hakları (patent başvuruları, marka tescili TR + EUIPO + USPTO) | 80.000 |
-| **Hizmet alımı alt toplamı** | **500.000** |
+| **Listelenen toplam** | **500.000** |
 
 > Talep edilen 400.000 TL'ye kalibrasyon: en kritik kalemler belgelendirme + sınai mülkiyet (kurul *ürünleştirme ciddiyeti* sinyali olarak okur). Pazarlama ve eğitim daha düşük tutulabilir.
 
@@ -88,17 +88,15 @@ Bilişim sektörü personeli için aylık üst limit = 4 × brüt asgari ücreti
 
 | | Tutar (TL) | Pay |
 |---|---:|---:|
-| KOSGEB destek (geri ödemesiz) | 650.000 | %30,2 |
-| KOSGEB destek (geri ödemeli) | 1.500.000 | %69,8 |
-| **Talep edilen toplam KOSGEB destek** | **2.150.000** | **%100** |
-| Prodaktiv özkaynak katkısı (asgari %20 — destek oranı %80 gereği) | 537.500 | — |
-| **Toplam proje bütçesi** | **2.687.500** | — |
+| KOSGEB destek (geri ödemesiz) | 500.000 | %25 |
+| KOSGEB destek (geri ödemeli) | 1.500.000 | %75 |
+| **Talep edilen toplam KOSGEB destek** | **2.000.000** | **%100** |
+| Prodaktiv özkaynak katkısı (asgari %20 — destek oranı %80 gereği) | 500.000 | — |
+| **Toplam proje bütçesi** | **2.500.000** | — |
 
 ---
 
 ## Bölüm D — 36 Ay Dağılımı (Çeyreklik Nakit Akışı)
-
-> Kurul ve izleme aşamasında destek sözleşmesinde harcamaların 12'şer aylık 3 dilime bölünmesi tipiktir. Aşağıdaki dağılım kurul'a sunulacak çeyreklik plana hazırlık amaçlıdır.
 
 | Çeyrek | Personel | Mak-Teç-Yaz | Hizmet | Çeyrek toplam |
 |---|---:|---:|---:|---:|
@@ -110,7 +108,7 @@ Bilişim sektörü personeli için aylık üst limit = 4 × brüt asgari ücreti
 | Q11–Q12 (ölçeklendirme, ihracat hazırlığı) | 210.000 | 10.000 | 40.000 | 260.000 |
 | **Toplam** | **750.000** | **350.000** | **400.000** | **1.500.000** |
 
-(Geri ödemesiz 650.000 TL ayrı bir takvim — kuruluş 20K Q1'de, performans 480K + kadın 150K = 630K toplamı yıllık istihdam/gelir milestone'larına bağlı dilimlerle açılır.)
+(Geri ödemesiz 500.000 TL ayrı bir takvim — kuruluş 20K Q1'de, performans 480K istihdam/gelir milestone'larına bağlı dilimlerle açılır.)
 
 ---
 
@@ -134,10 +132,11 @@ KOSGEB kuralı: proje süresi (36 ay) bitiminden sonra **6 ay ödemesiz**, ardı
 
 ## Bölüm F — Kalibrasyon Notları
 
-1. **Üst limit kalibrasyonu:** Personel + makine-teçhizat-yazılım + hizmet alımı toplamı her zaman 1.500.000 TL geri ödemeli ceiling'i geçemez. Şu anki dağılım tam tavanda. Kurul'da soru gelirse "her kalemde ihtiyaç fazlası özkaynak ile karşılanmaktadır" pozisyonu anlat.
-2. **Bilişim personeli formülü:** Aylık brüt asgari ücretin işverene maliyetinin 4 katı bir *üst limit*; talep edilen tutar bunun altında olabilir ve bizim tablomuz da altında. Bu kurul'a *ihtiyaca göre talep* sinyalini verir.
+1. **Üst limit kalibrasyonu:** Personel + makine-teçhizat-yazılım + hizmet alımı toplamı her zaman 1.500.000 TL geri ödemeli ceiling'i geçemez. Şu anki dağılım tam tavanda.
+2. **Bilişim personeli formülü:** Aylık brüt asgari ücretin işverene maliyetinin 4 katı bir *üst limit*; talep edilen tutar bunun altında. Bu kurul'a *ihtiyaca göre talep* sinyalini verir.
 3. **Donanım odağı kalibre edildi:** ESP32 dock için kalıp/seri üretim KALEMİ kasıtlı olarak 0 TL. Bu, iş planının Faz 1 = yazılım, Faz 2 = donanım sıralamasını destekler ve KOSGEB döneminde mali risk düşürür.
-4. **KDV ve diğer vergiler:** KOSGEB destek tutarları KDV hariç verilir; KDV özkaynaktan karşılanır. Yukarıdaki tutarlar KDV hariçtir.
+4. **KDV ve diğer vergiler:** KOSGEB destek tutarları KDV hariç verilir; KDV özkaynaktan karşılanır.
+5. **Plan B vs Plan A farkı:** Plan A'da kadın girişimci +150K bonus ile toplam 2.150.000 TL'ye çıkıyordu. Plan B'de bonus aktif değil; toplam 2.000.000 TL. Geri ödemesiz tarafta 150K azalış, geri ödemeli taraf değişmedi.
 
 ---
 

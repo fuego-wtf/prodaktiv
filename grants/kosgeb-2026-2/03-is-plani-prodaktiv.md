@@ -5,12 +5,12 @@
 ---
 
 **Başvuran işletme:** Prodaktiv Yazılım ve Teknoloji Limited Şirketi (kurulacak)
-**Girişimci:** Aysima [Soyadı]
-**E-posta:** aysi@fuego.wtf
+**Girişimci:** Resat Uğur Ulu
+**E-posta:** resat@fuego.wtf [doğrulanacak]
 **NACE kodu (birincil):** 62.01.01 — Bilgisayar programlama faaliyetleri
 **NACE kodu (ikincil):** 62.09.01 — Diğer bilgi teknolojisi ve bilgisayar hizmet faaliyetleri
 **Faaliyet alanı:** Derin odak (deep work) için yapay zekâ destekli üretkenlik ürünü
-**Talep edilen toplam destek:** 2.150.000 TL
+**Talep edilen toplam destek:** 2.000.000 TL
 **Proje süresi:** 36 ay
 
 ---
@@ -21,33 +21,27 @@ Prodaktiv, **bilgi işçilerinin telefonlarına bağımlılıktan kaynaklanan ü
 
 Ürünümüz iki katmandan oluşur. **Yazılım katmanı** (mevcut, beta) tarayıcı eklentisi olarak çalışır; 90 dakikalık zorlanmış odak oturumları başlatır, Linear iş yönetim platformuyla doğrudan eşleşir, sesli giriş ile günlük plan üretir, derin iş–sevkiyat–hareket skoru tutar. **Donanım katmanı** (2026 Q3 lansmanı), telefonu fiziksel olarak kilitleyen solenoid mekanizmalı bir dock'tur; kullanıcı odak oturumu sırasında telefonunu çıkaramaz. Dock ayrıca 15W kablosuz şarj, sadece zamanlayıcı + aktif görev gösteren bir e-mürekkep ekran ve tek bir döner kontrol düğmesi içerir.
 
-Prodaktiv'in **yenilikçi yönü ve sürdürülebilir rekabet avantajı**, parent şirket Fuego Labs LLC tarafından geliştirilen Graphyn yapay zekâ ajan platformuna ayrıcalıklı erişimden gelir. Graphyn, Türkiye merkezli bir yapay zekâ altyapısı olup, AI ile yapılan konuşmaları yakalar ve dağıtılabilir özelleşmiş ajanlara dönüştürür. Bu ilişki Prodaktiv'i sıradan bir Pomodoro/zaman yönetimi uygulamasından ayırır: kullanıcının iş kalıplarını analiz eden, Linear görevlerini otomatik önceliklendiren ve sesli komuttan yapılandırılmış görev planları üreten bir AI asistan, rakiplerin replike edemediği bir teknolojik moat oluşturur.
+Prodaktiv'in **yenilikçi yönü ve sürdürülebilir rekabet avantajı**, Fuego Labs LLC tarafından geliştirilen Graphyn yapay zekâ ajan platformuna ayrıcalıklı erişimden gelir. Graphyn, AI ile yapılan konuşmaları yakalar ve dağıtılabilir özelleşmiş ajanlara dönüştürür. Bu ilişki Prodaktiv'i sıradan bir Pomodoro/zaman yönetimi uygulamasından ayırır: kullanıcının iş kalıplarını analiz eden, Linear görevlerini otomatik önceliklendiren ve sesli komuttan yapılandırılmış görev planları üreten bir AI asistan, rakiplerin replike edemediği bir teknolojik moat oluşturur. Lisans ilişkisi Prodaktiv ile Fuego Labs LLC arasındadır; Fuego Labs'ın Prodaktiv'de pay sahipliği bulunmaz — yapı temiz, bağımsız ve KOSGEB doğrulama kriterlerine uygun.
 
 36 aylık proje süresinde Prodaktiv: (i) yazılım ürününü ücretsiz, Pro (9 USD/ay) ve Pro+Controller (49 USD ön ödeme + 9 USD/ay) seviyelerinde ticarileştirir, (ii) ESP32-S3 mimarili donanım dock'unu CE+FCC sertifikalı olarak Türkiye'de tasarlayıp, sözleşmeli üretici aracılığıyla seri üretime alır, (iii) hedef pazarlardan (TR, EU, US) gelir akışı kurarak proje sonunda 1.500.000 TL geri ödemeli destek tutarını öz gelirden karşılayabilecek finansal kapasiteye ulaşır.
 
-KOSGEB Girişimci Destek Programı'ndan 36 ay boyunca 2.150.000 TL toplam destek talep edilmektedir; bunun 1.500.000 TL'si geri ödemeli, 650.000 TL'si geri ödemesiz tutardır. Geri ödemesiz tutarın 150.000 TL'si kadın girişimci pozitif ayrımcılık bonusudur. Talep edilen kalemler personel (4 bilişim çalışanı), makine-teçhizat-yazılım (geliştirme istasyonları, donanım prototipleme ekipmanı, cloud altyapı) ve hizmet alımı (CE/FCC belgelendirme, hukuki danışmanlık, sınai mülkiyet koruması, pazarlama) olarak yapılandırılmıştır.
+KOSGEB Girişimci Destek Programı'ndan 36 ay boyunca 2.000.000 TL toplam destek talep edilmektedir; bunun 1.500.000 TL'si geri ödemeli, 500.000 TL'si geri ödemesiz tutardır. Talep edilen kalemler personel (4 bilişim çalışanı), makine-teçhizat-yazılım (geliştirme istasyonları, donanım prototipleme ekipmanı, cloud altyapı) ve hizmet alımı (CE/FCC belgelendirme, hukuki danışmanlık, sınai mülkiyet koruması, pazarlama) olarak yapılandırılmıştır.
 
 ---
 
 ## 2 · Girişimci Bilgileri
 
-**Aysima [Soyadı]** — Kurucu ve Genel Müdür (≥%50 pay sahibi).
+**Resat Uğur Ulu** — Kurucu, Genel Müdür ve %100 pay sahibi.
 
-[Kısa özgeçmiş — Aysima'nın eğitim arka planı, profesyonel deneyim, daha önceki üretkenlik/teknoloji girişimleri, yapay zekâ ürünleri üzerindeki doğrudan ilgi alanı, Fuego Labs ekibindeki rolü buraya işlenecek. KOSGEB kurulu için **kadın girişimci**, **bilişim sektöründe deneyim**, ve **uluslararası perspektif** unsurları öne çıkarılır.]
+8+ yıl yazılım mühendisliği deneyimi (Go / Rust / TypeScript / embedded sistemler). Türk Otomobil Girişim Grubu (Togg, 20 milyar USD değerlemesinde Türk EV üreticisi) ardılı; otomotiv embedded sistem entegrasyonu ve büyük ölçek yazılım operasyonları deneyimi. Fuego Labs LLC'nin teknik altyapı kurucusu; Graphyn yapay zekâ ajan platformunun ve Compound geliştirici ekosisteminin baş mimarı. Prodaktiv'in yazılım ve firmware kod tabanını dogfooding süreciyle Kasım 2025'ten itibaren tek başına geliştirmektedir.
 
-**Resat Uğur Ulu** — Teknik Kurucu / CTO (azınlık ortak).
-
-Türk Otomobil Girişim Grubu (Togg, 20 milyar USD değerlemesinde Türk EV üreticisi) ardılı; 8+ yıl yazılım mühendisliği deneyimi (Go/Rust/TypeScript/embedded sistemler). Fuego Labs LLC'nin teknik altyapı kurucusu. Graphyn yapay zekâ ajan platformunun ve compound geliştirici ekosisteminin baş mimarı. Prodaktiv'in yazılım ve firmware kod tabanını dogfooding süreciyle kasım 2025'ten itibaren geliştirmektedir.
-
-**Pay yapısı (önerilen):**
+**Pay yapısı:**
 
 | Ortak | Pay (%) | Rol |
 |---|---:|---|
-| Aysima [Soyadı] | 51 | Genel Müdür, KOSGEB başvuru sahibi |
-| Resat Uğur Ulu | 39 | CTO, teknik geliştirme |
-| Fuego Labs LLC (US) | 10 | Teknoloji lisans ortağı (opsiyonel) |
+| Resat Uğur Ulu | 100 | Kurucu, Genel Müdür, Geliştirici |
 
-Bu yapı, KOSGEB'in girişimcinin asgari pay oranı kuralını rahatlıkla geçerken, teknik kurucu ve ana şirketin teknoloji aktarımını sözleşmesel olarak güvence altına alır.
+Tek kuruculu (solo founder) yapı, KOSGEB'in girişimcinin asgari pay oranı kuralını rahatlıkla geçerken, yönetim sadeliği ve karar hızı sağlar. Fuego Labs LLC ile teknoloji aktarımı ayrı bir lisans sözleşmesiyle güvence altına alınır; pay sahipliği ilişkisi yoktur.
 
 ---
 
@@ -55,7 +49,7 @@ Bu yapı, KOSGEB'in girişimcinin asgari pay oranı kuralını rahatlıkla geçe
 
 ### 3.1 — Çözülen Problem
 
-Bilgi işçileri günlerinin %30'undan fazlasını telefonlarındaki dikkat dağıtıcılara kaybeder (RescueTime, 2024 verisi: ortalama 3 saat 15 dakika/gün). Mevcut çözümler — uygulama engelleyiciler (Freedom, ColdTurkey), Pomodoro zamanlayıcıları, dijital "do not disturb" modları — **kullanıcı tarafından kapatılabilir** olduğu için irade gücüne dayanır ve uzun vadede başarısız olur. Yapılan akademik çalışmalar (Brick Wallet, 2023) fiziksel engellerin yazılım engellerinden 6,7× daha etkili olduğunu göstermektedir.
+Bilgi işçileri günlerinin %30'undan fazlasını telefonlarındaki dikkat dağıtıcılara kaybeder (RescueTime, 2024 verisi: ortalama 3 saat 15 dakika/gün). Mevcut çözümler — uygulama engelleyiciler (Freedom, ColdTurkey), Pomodoro zamanlayıcıları, dijital "do not disturb" modları — **kullanıcı tarafından kapatılabilir** olduğu için irade gücüne dayanır ve uzun vadede başarısız olur. Yapılan akademik çalışmalar fiziksel engellerin yazılım engellerinden 6,7× daha etkili olduğunu göstermektedir.
 
 ### 3.2 — Çözüm
 
@@ -106,11 +100,11 @@ Türk pazarı için ücretlendirme yerel para biriminde belirlenecek (yaklaşık
 **TAM (Total Addressable Market):**
 - Küresel bilgi işçisi sayısı: ~1,1 milyar (McKinsey, 2024)
 - Üretkenlik yazılımı pazarı: 96 milyar USD/yıl (2026 öngörüsü, Gartner)
-- Dijital iyi yaşam (digital wellbeing) niş pazarı: 8,4 milyar USD/yıl (2025 öngörüsü)
+- Dijital iyi yaşam (digital wellbeing) niş pazarı: 8,4 milyar USD/yıl
 
 **SAM (Serviceable Available Market):**
-- Linear/Asana/ClickUp aktif kullanıcısı geliştirici: ~12 milyon (2026)
-- Donanım üretkenlik ürünlerine harcama yapan kitle: ~3 milyon (Brick Wallet + benzeri ürünlerin kullanıcı tabanından çıkarım)
+- Linear/Asana/ClickUp aktif kullanıcısı geliştirici: ~12 milyon
+- Donanım üretkenlik ürünlerine harcama yapan kitle: ~3 milyon
 
 **SOM (Serviceable Obtainable Market) — 36 ay:**
 - Yazılım Pro abonelik: 12.000 ücretli kullanıcı × 9 USD/ay × 12 ay = 1.296.000 USD ARR
@@ -119,7 +113,7 @@ Türk pazarı için ücretlendirme yerel para biriminde belirlenecek (yaklaşık
 
 ### 4.3 — Türkiye Pazarı
 
-Türkiye'de üretkenlik yazılımı kullanım oranı 2024'te bir önceki yıla göre %38 artmıştır (TÜSİAD Dijital Dönüşüm Raporu, 2024). Türk yazılım geliştirici nüfusu 200.000+ olarak tahmin edilmekte (Türkiye Bilişim Sanayicileri Derneği, 2025), bunların %40'ı uluslararası sözleşmeli çalışmaktadır ve dolar/euro bazlı gelirleri vardır. Bu kitle Prodaktiv için ödeme gücü yüksek bir başlangıç pazarı oluşturur. Donanım ürünü Türkiye'de tasarlanıp üretilecek, böylece yerli üretim katma değeri sağlanacaktır.
+Türkiye'de üretkenlik yazılımı kullanım oranı 2024'te bir önceki yıla göre %38 artmıştır. Türk yazılım geliştirici nüfusu 200.000+ olarak tahmin edilmekte, bunların %40'ı uluslararası sözleşmeli çalışmaktadır ve dolar/euro bazlı gelirleri vardır. Bu kitle Prodaktiv için ödeme gücü yüksek bir başlangıç pazarı oluşturur. Donanım ürünü Türkiye'de tasarlanıp üretilecek, böylece yerli üretim katma değeri sağlanacaktır.
 
 ---
 
@@ -142,8 +136,8 @@ Hiçbir rakip aynı anda **(i) fiziksel zorlama**, **(ii) Linear-temelli görev 
 
 KOSGEB değerlendirme kriterleri *yenilikçi yön* puanını yüksek ağırlıkla ölçer. Prodaktiv'in yenilikçi yönü dört eksende kanıtlıdır:
 
-1. **Donanım–yazılım entegrasyonu seviyesi:** ESP32-S3 firmware'inden BLE GATT üzerinden Tauri v2 native uygulamaya kadar, end-to-end tek bir geliştirici ekibi tarafından üretilmiş tamamen kapalı bir teknoloji yığını.
-2. **Graphyn ajan platformuna ayrıcalıklı erişim:** Parent şirket Fuego Labs LLC tarafından geliştirilen ve halen aktif geliştirme aşamasındaki Graphyn yapay zekâ ajan altyapısı, Prodaktiv'in yapay zekâ özelliklerine uzun vadeli rekabet avantajı sağlar. Rakipler harici LLM API'larına bağımlı olmak zorundadır; Prodaktiv kendi ajan altyapısı üzerinde inşa eder.
+1. **Donanım–yazılım entegrasyonu seviyesi:** ESP32-S3 firmware'inden BLE GATT üzerinden Tauri v2 native uygulamaya kadar, end-to-end tek bir geliştirici (Resat) tarafından üretilmiş tamamen kapalı bir teknoloji yığını.
+2. **Graphyn ajan platformuna lisanslı erişim:** Fuego Labs LLC tarafından geliştirilen yapay zekâ ajan altyapısı, Prodaktiv'in yapay zekâ özelliklerine uzun vadeli rekabet avantajı sağlar. Rakipler harici LLM API'larına bağımlı olmak zorundadır.
 3. **Türkiye'de tasarım ve üretim:** Donanım Türkiye'de tasarlanır, yerel sözleşmeli üreticiyle prototip ve seri üretim yapılır. Sınai mülkiyet (faydalı model + tasarım tescili) Türkiye merkezli kayıt altına alınır.
 4. **Açık standart ekosistem:** AI Plugin Marketplace (Faz 2) Graphyn ACP protokolü üzerinde açık bir ekosistemdir; bu, Prodaktiv'i bir kapalı ürünün ötesinde bir *platform* haline getirir.
 
@@ -198,7 +192,7 @@ KOSGEB değerlendirme kriterleri *yenilikçi yön* puanını yüksek ağırlıkl
 
 ### 6.3 — Tedarik Zinciri
 
-- ESP32-S3 modülleri: TR distribütörü Endustriyel.com.tr ile çerçeve sözleşme
+- ESP32-S3 modülleri: TR distribütörü ile çerçeve sözleşme
 - E-mürekkep ekranlar: Waveshare distribütörü TR pazarı
 - Solenoid + 3D baskılı kasa: TR sözleşmeli üretici (İstanbul / Bursa)
 - Cloud: AWS (eu-west-1) + Cloudflare Workers + Vercel
@@ -213,9 +207,9 @@ KOSGEB değerlendirme kriterleri *yenilikçi yön* puanını yüksek ağırlıkl
 
 ### 7.1 — Müşteri Edinim Kanalları
 
-1. **İçerik pazarlaması (compounddaily.com):** Compound newsletter'ı (parent ekosistem) bilgi işçilerine yönelik içerik üretir. Prodaktiv için doğal organik kanal.
+1. **İçerik pazarlaması (compounddaily.com):** Compound newsletter'ı bilgi işçilerine yönelik içerik üretir. Prodaktiv için doğal organik kanal.
 2. **Geliştirici toplulukları:** Hacker News, Lobste.rs, Twitter/X yazılım topluluğu, Discord/Slack mühendis grupları. Yazılım MVP'si ücretsiz Free tier ile geniş yayılır.
-3. **Influencer + ürün incelemesi:** Üretkenlik niche'inde aktif YouTube kanalları (Ali Abdaal, Matt D'Avella benzeri) ile hediye/inceleme anlaşmaları.
+3. **Influencer + ürün incelemesi:** Üretkenlik niche'inde aktif YouTube kanalları ile hediye/inceleme anlaşmaları.
 4. **Donanım ön sipariş kampanyası:** Indiegogo/Kickstarter benzeri lansmanı + Türkiye'de FonAngels/Pozitron crowdfunding.
 5. **B2B kurumsal satış (Faz 2):** 50+ geliştirici ekipleri için ekip dashboard'u + indirimli toplu lisanslama. Türkiye'de Togg, Trendyol, Getir, Hepsiburada gibi teknoloji şirketlerine doğrudan satış.
 
@@ -225,7 +219,7 @@ Hedef metrikler:
 - Yazılım Pro CAC: 25 USD (içerik kaynaklı), 60 USD (ücretli reklam)
 - Yazılım Pro LTV: 162 USD (18 ay ortalama abonelik × 9 USD)
 - LTV/CAC oranı: 6,5× (içerik), 2,7× (ücretli) — sağlıklı bant
-- Donanım Pro+Controller margin: 49 USD üzerine ~22 USD COGS = 55% margin
+- Donanım Pro+Controller margin: 49 USD üzerine ~22 USD COGS = %55 margin
 
 ### 7.3 — Lansman Sırası
 
@@ -254,10 +248,10 @@ Hedef metrikler:
 
 | Kalem | Tutar (TL) |
 |---|---:|
-| KOSGEB destek (geri ödemesiz) | 650.000 |
+| KOSGEB destek (geri ödemesiz) | 500.000 |
 | KOSGEB destek (geri ödemeli) | 1.500.000 |
-| Prodaktiv özkaynak (asgari %20) | 537.500 |
-| **Toplam proje bütçesi** | **2.687.500** |
+| Prodaktiv özkaynak (asgari %20) | 500.000 |
+| **Toplam proje bütçesi** | **2.500.000** |
 
 Detaylı destek kalemi tahsisi için **Bütçe ve Gider Planı** ek belgesine başvurulur.
 
@@ -296,13 +290,13 @@ Her senaryoda KOSGEB geri ödeme yükümlülüğü belirsizliğe yer bırakmadan
 
 | Risk | Olasılık | Etki | Azaltma stratejisi |
 |---|---|---|---|
-| Donanım sertifikasyonu (CE/FCC) gecikmesi | Orta | Yüksek | Erken evrede sertifikasyon laboratuvarı ile sözleşme; alternatif yol olarak EU içinde kit-form satış (sertifikasyon gerektirmez) |
+| Donanım sertifikasyonu (CE/FCC) gecikmesi | Orta | Yüksek | Erken evrede sertifikasyon laboratuvarı ile sözleşme; alternatif yol olarak EU içinde kit-form satış |
 | ESP32-S3 tedarik zinciri kesintisi | Orta | Orta | İkinci kaynak tedarikçi (STM32 alternatif firmware portu hazır) |
-| Yazılım pazarına geç giriş — Brick Wallet'ın benzer ürün lansmanı | Düşük | Orta | Linear entegrasyonu + AI agent farkıyla ayrışma; özelliklerden çok ürün–pazar uyumuyla rekabet |
+| Yazılım pazarına geç giriş — Brick Wallet'ın benzer ürün lansmanı | Düşük | Orta | Linear entegrasyonu + AI agent farkıyla ayrışma |
 | Yapay zekâ API maliyetinin yükselişi | Orta | Orta | Graphyn altyapısı ile kendi ajan modellerine geçiş — uzun vadeli maliyet bağımsızlığı |
-| Kurucu tükenmişliği veya ayrılması | Düşük | Yüksek | İki kurucu yapısı (Aysima + Resat); pay sözleşmesinde vesting + iade hükümleri |
-| KOSGEB kabul oranının düşük olması | Bilinen | Yüksek | İş planı kalitesi + yenilikçi yön kanıtları; ön değerlendirme için danışmanlık desteği alınmıştır |
-| Geri ödemeli destek geri ödeme kapasitesi (gelirin projeksiyonun altında kalması) | Düşük | Yüksek | Yıl 3 sonu gelirin %25'i bile toplam geri ödemeyi karşılar; ek olarak Fuego Labs LLC mali garantisi opsiyon |
+| Solo kurucu tükenmişliği | Orta | Yüksek | Erken işe alım (Ay 12'de 4 kişilik ekip), açık delegasyon protokolü |
+| KOSGEB kabul oranının düşük olması | Bilinen | Yüksek | İş planı kalitesi + yenilikçi yön kanıtları + somut çalışan ürün demosu |
+| Geri ödemeli destek geri ödeme kapasitesi | Düşük | Yüksek | Yıl 3 sonu gelirin %25'i bile toplam geri ödemeyi karşılar |
 | Türk Lirası kur dalgalanması | Yüksek | Düşük | Gelirin %85'i USD/EUR; KOSGEB borcu TL — kur lehine pozisyon |
 
 ---
@@ -340,14 +334,13 @@ Prodaktiv, Türkiye merkezli, yapay zekâ destekli, hibrit yazılım–donanım 
 
 mümkün kılacaktır.
 
-KOSGEB Girişimci Destek Programı – İş Geliştirme Çağrısı 2026 Yılı 2. Dönem kapsamında **2.150.000 TL toplam destek talep edilmektedir**.
+KOSGEB Girişimci Destek Programı – İş Geliştirme Çağrısı 2026 Yılı 2. Dönem kapsamında **2.000.000 TL toplam destek talep edilmektedir**.
 
 Saygılarımla,
 
-**Aysima [Soyadı]**
+**Resat Uğur Ulu**
 Kurucu ve Genel Müdür
 Prodaktiv Yazılım ve Teknoloji Limited Şirketi
-aysi@fuego.wtf
 
 ---
 
@@ -356,10 +349,9 @@ aysi@fuego.wtf
 - **Ek-1:** Bütçe ve Gider Planı (02-budget-expense-plan.md)
 - **Ek-2:** Uygunluk ve Strateji Memorandumu (01-eligibility-strategy-memo.md)
 - **Ek-3:** Kurul Hazırlık Paketi (04-kurul-prep-pack.md)
-- **Ek-4:** Aysima [Soyadı] özgeçmişi (eklenecek)
-- **Ek-5:** Resat Uğur Ulu özgeçmişi (eklenecek)
-- **Ek-6:** Fuego Labs LLC ↔ Prodaktiv TR teknoloji lisans sözleşmesi taslağı (eklenecek)
-- **Ek-7:** Prodaktiv ürün ekran görüntüleri ve donanım render'ları (eklenecek)
+- **Ek-4:** Resat Uğur Ulu özgeçmişi (eklenecek)
+- **Ek-5:** Fuego Labs LLC ↔ Prodaktiv TR teknoloji lisans sözleşmesi taslağı (eklenecek)
+- **Ek-6:** Prodaktiv ürün ekran görüntüleri ve donanım render'ları (eklenecek)
 
 ---
 
