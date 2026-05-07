@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "test:security": "node scripts/security-no-client-ai.mjs",
+    "test:security": "bun scripts/security-no-client-ai.mjs",
     "preview": "vite preview",
     "pages:dev": "wrangler pages dev dist"
   },
