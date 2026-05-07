@@ -49,7 +49,6 @@ export interface LinearIssue {
 
 export interface AppSettings {
   linearApiKey: string;
-  geminiApiKey: string;
 }
 
 // Device (BLE) Types
@@ -160,5 +159,4 @@ export const INITIAL_DAY_LOG: DayLog = {
 
 export const INITIAL_SETTINGS: AppSettings = {
   linearApiKey: "",
-  geminiApiKey: "", 
 };

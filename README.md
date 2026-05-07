@@ -41,7 +41,7 @@ Your phone is stealing 3+ hours of your productive day. App blockers don't work�
 
 - **90-minute focus sessions** with enforced breaks
 - **Linear sync** — import tasks from your engineering workflow
-- **Voice-to-plan** — speak your intent, get structured tasks
+- **Manual day planning** — turn Linear tasks into a focused work queue
 - **Daily scoring** — track deep work, shipping, movement
 
 ### The Hardware (Q2 2026)

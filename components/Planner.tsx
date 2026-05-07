@@ -3,7 +3,6 @@ import { DayLog, LinearIssue, AppSettings, Task, LinearAssignee } from '../types
 import { PenTool, Ban, GitBranch, Plus, Trash2, ArrowRight, GripVertical, Link2, Lock, CornerDownRight, XCircle, Copy, Check, User } from 'lucide-react';
 import { LinearPicker } from './LinearPicker';
 import { fetchLinearUsers } from '../services/linear';
-import { planDayFromTask } from '../services/agent';
 
 interface PlannerProps {
   log: DayLog;
@@ -15,7 +14,6 @@ interface PlannerProps {
 export const Planner: React.FC<PlannerProps> = ({ log, updateLog, settings, openSettings }) => {
   const [showLinear, setShowLinear] = useState(false);
   const [manualTaskInput, setManualTaskInput] = useState("");
-  const [isAgentThinking, setIsAgentThinking] = useState(false);
   
   // Assignee Data
   const [availableAssignees, setAvailableAssignees] = useState<LinearAssignee[]>([]);
@@ -119,24 +117,6 @@ export const Planner: React.FC<PlannerProps> = ({ log, updateLog, settings, open
     }));
 
     updateLog({ tasks: [...log.tasks, ...newTasks] });
-
-    if (!log.mainObjective && settings.geminiApiKey) {
-        handleSmartSuggest(newIssues[0]);
-    }
-  };
-
-  const handleSmartSuggest = async (issue: LinearIssue) => {
-    setIsAgentThinking(true);
-    try {
-        const plan = await planDayFromTask(issue, settings.geminiApiKey);
-        if (plan.mainObjective) {
-            updateLog({ mainObjective: plan.mainObjective });
-        }
-    } catch(e) {
-        // Fail silently
-    } finally {
-        setIsAgentThinking(false);
-    }
   };
 
   const addManualTask = () => {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AppSettings } from '../types';
-import { X, Key, Bot, AlertCircle } from 'lucide-react';
+import { X, Key, AlertCircle } from 'lucide-react';
 
 interface SettingsProps {
   settings: AppSettings;
@@ -65,24 +65,6 @@ export const Settings: React.FC<SettingsProps> = ({ settings, updateSettings, on
                         Format: lin_api_... (found in Linear Profile settings)
                     </p>
                 )}
-            </div>
-
-            {/* Gemini Config */}
-            <div>
-                 <div className="flex items-center gap-2 mb-2">
-                    <div className="bg-purple-600 text-white p-1"><Bot size={14}/></div>
-                    <label className="font-bold font-mono text-sm uppercase">Gemini Agent Key</label>
-                </div>
-                 <input 
-                    type="password"
-                    value={settings.geminiApiKey}
-                    onChange={(e) => updateSettings({...settings, geminiApiKey: e.target.value})}
-                    placeholder="AIza..."
-                    className="w-full border-2 border-gray-200 p-2 font-mono text-xs focus:border-black outline-none"
-                />
-                 <p className="text-[10px] text-gray-400 mt-1 font-mono">
-                    Required for "Agent Mode" planning.
-                </p>
             </div>
 
             <button 

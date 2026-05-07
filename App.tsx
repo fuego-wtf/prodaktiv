@@ -18,6 +18,19 @@ const STORAGE_KEY = 'prodaktiv_app_data_v1';
 const SETTINGS_KEY = 'prodaktiv_app_settings';
 const VIEW_KEY = 'prodaktiv_view_preference';
 
+const normalizeSettings = (value: unknown): AppSettings => {
+  if (!value || typeof value !== 'object') {
+    return INITIAL_SETTINGS;
+  }
+
+  const candidate = value as Partial<Record<keyof AppSettings, unknown>>;
+
+  return {
+    ...INITIAL_SETTINGS,
+    linearApiKey: typeof candidate.linearApiKey === 'string' ? candidate.linearApiKey : INITIAL_SETTINGS.linearApiKey,
+  };
+};
+
 const App: React.FC = () => {
   const [log, setLog] = useState<DayLog>(INITIAL_DAY_LOG);
   const [settings, setSettings] = useState<AppSettings>(INITIAL_SETTINGS);
@@ -79,11 +92,8 @@ const App: React.FC = () => {
             const savedSettings = localStorage.getItem(SETTINGS_KEY);
             if (savedSettings) {
                 try {
-                    setSettings(JSON.parse(savedSettings));
+                    setSettings(normalizeSettings(JSON.parse(savedSettings)));
                 } catch (e) {}
-            } else if (process.env.API_KEY) {
-                // Fallback to env var if available (for demo purposes)
-                setSettings(s => ({...s, geminiApiKey: process.env.API_KEY || ''}));
             }
         } catch (error) {
             console.error("Initialization error:", error);
