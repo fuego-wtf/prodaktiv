@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Lock, Loader2, Check, ArrowRight, Crosshair, Timer, Smartphone, Play } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 // Hardware Specs - clean technical style
 const HardwareSpecs = () => (
@@ -99,6 +100,7 @@ export const LandingPage = ({ onEnter }: { onEnter: () => void }) => {
           </div>
 
           <nav className="flex items-center gap-4">
+            <ThemeToggle />
             <button
               onClick={onEnter}
               className="hidden sm:block text-gray-600 hover:text-black font-mono text-sm"
@@ -300,7 +302,7 @@ export const LandingPage = ({ onEnter }: { onEnter: () => void }) => {
 
       {/* Footer */}
       <footer className="border-t-2 border-black bg-white mt-12">
-        <div className="max-w-6xl mx-auto h-14 flex items-center justify-between px-6 text-xs text-gray-500 font-mono">
+        <div className="max-w-6xl mx-auto h-14 flex items-center justify-between gap-4 px-6 text-xs text-gray-500 font-mono">
           <div className="flex items-center gap-2">
             <Lock size={12} />
             <span>PRODAKTIV</span>

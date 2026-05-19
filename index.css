@@ -1,0 +1,123 @@
+/*
+ * prodaktiv — root tokens
+ *
+ * Default (no @media): light mode. The current canonical look.
+ * @media (prefers-color-scheme: dark): dark-mode shell overrides, gated by
+ *   `:not([data-theme="light"])` so the explicit toggle can force light even
+ *   when the OS is dark.
+ * html[data-theme="dark"] / html[data-theme="light"]: explicit toggle overrides
+ *   (set by brand/compound/tokens/theme-toggle.js).
+ *
+ * Note on scope: this file gives prodaktiv shell-level dual-mode (body bg
+ * + body text flip on OS dark) plus an explicit auto/dark/light toggle in
+ * the footer. Component utility classes in App.tsx and sub-components are
+ * still hardcoded Tailwind (e.g. bg-white, text-gray-400) which means
+ * individual components do not yet adapt. See docs/THEME_DECISION.md for
+ * the migration list of utilities that need `dark:` paired variants for
+ * full component-level coverage.
+ *
+ * Loop: docs/ralph-loops/2026-05-10-light-dark-mode.md
+ */
+
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --text-primary: #111111;
+  --text-secondary: rgba(17, 17, 17, 0.66);
+  --surface: #f4f4f5;       /* matches existing system-gray utility */
+  --border: rgba(0, 0, 0, 0.10);
+  --accent: #111111;        /* monochrome system; black IS the accent */
+  --ink: #111111;
+  --muted: rgba(17, 17, 17, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111111;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.66);
+    --surface: #1f1f23;
+    --border: rgba(255, 255, 255, 0.10);
+    --accent: #ffffff;       /* invert mono to maintain contrast */
+    --ink: #ffffff;
+    --muted: rgba(255, 255, 255, 0.5);
+  }
+}
+
+html[data-theme="dark"] {
+  --bg: #111111;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.66);
+  --surface: #1f1f23;
+  --border: rgba(255, 255, 255, 0.10);
+  --accent: #ffffff;
+  --ink: #ffffff;
+  --muted: rgba(255, 255, 255, 0.5);
+}
+
+html[data-theme="light"] {
+  --bg: #ffffff;
+  --text-primary: #111111;
+  --text-secondary: rgba(17, 17, 17, 0.66);
+  --surface: #f4f4f5;
+  --border: rgba(0, 0, 0, 0.10);
+  --accent: #111111;
+  --ink: #111111;
+  --muted: rgba(17, 17, 17, 0.5);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+}
+
+/* ===================== THEME TOGGLE ===================== */
+/* Top-right header icon segmented control. Brutalist black-border-on-white
+   chrome matching the `border-2 border-black` cards used across prodaktiv. */
+.prodaktiv-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  border: 2px solid var(--ink, #111111);
+  border-radius: 4px;
+  background: var(--bg, #ffffff);
+}
+
+.prodaktiv-theme-toggle button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: var(--muted, rgba(17, 17, 17, 0.5));
+  opacity: 1;
+  transition: color 120ms ease, background 120ms ease;
+  border-radius: 2px;
+}
+
+.prodaktiv-theme-toggle button:hover {
+  color: var(--ink, #111111);
+  background: var(--surface, #f4f4f5);
+}
+
+.prodaktiv-theme-toggle button[aria-pressed="true"] {
+  color: var(--bg, #ffffff);
+  background: var(--ink, #111111);
+}
+
+.prodaktiv-theme-toggle button:focus-visible {
+  outline: 2px solid var(--ink, #111111);
+  outline-offset: 2px;
+}
+
+.prodaktiv-theme-toggle svg { display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  .prodaktiv-theme-toggle button { transition: none; }
+}

@@ -10,6 +10,7 @@ import { LandingPage } from './components/LandingPage';
 import { LoginModal } from './components/LoginModal';
 import { DevicePairing } from './components/DevicePairing';
 import { ConfirmDialog } from './components/ConfirmDialog';
+import { ThemeToggle } from './components/ThemeToggle';
 import { useDevice } from './hooks/useDevice';
 import { DayLog, ScoreState, INITIAL_DAY_LOG, Phase, AppSettings, INITIAL_SETTINGS, ChatEntry } from './types';
 import { ShieldAlert, RotateCcw, Settings as SettingsIcon, Sidebar, PanelRightClose, PanelRightOpen } from 'lucide-react';
@@ -269,7 +270,7 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white text-system-black font-sans selection:bg-black selection:text-white animate-in fade-in duration-300">
+    <div className="min-h-screen bg-white dark:bg-system-black text-system-black dark:text-white font-sans selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black animate-in fade-in duration-300">
       <div className="max-w-[1400px] mx-auto px-6 pb-20">
         
         <Header
@@ -287,7 +288,8 @@ const App: React.FC = () => {
                     {new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}
                 </div>
                 <div className="flex gap-4 items-center">
-                     <button 
+                     <ThemeToggle />
+                     <button
                         onClick={() => setShowSettings(true)}
                         className="text-xs font-bold font-mono text-gray-400 hover:text-black flex items-center gap-1"
                     >
@@ -364,6 +366,7 @@ const App: React.FC = () => {
              </div>
           </div>
         </div>
+
       </div>
       
       {showSettings && (
