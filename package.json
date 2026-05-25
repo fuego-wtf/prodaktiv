@@ -12,7 +12,9 @@
     "build": "vite build",
     "test:security": "bun scripts/security-no-client-ai.mjs",
     "preview": "vite preview",
-    "pages:dev": "wrangler pages dev dist"
+    "pages:dev": "bunx wrangler pages dev dist",
+    "publish": "bunx wrangler pages deploy dist --project-name=prodaktiv --branch=main --commit-dirty=true",
+    "verify:live": "bun scripts/verify-live.mjs https://prodaktiv.com"
   },
   "dependencies": {
     "lucide-react": "^0.562.0",
